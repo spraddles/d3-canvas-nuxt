@@ -1,0 +1,26 @@
+<template>
+    <div class="zoom-buttons">
+        <div class="bigger" @click="orgChart.zoomIn()">Zoom in</div>
+        <div class="smaller" @click="orgChart.zoomOut()">Zoom out</div>
+        <div class="reset" @click="orgChart.zoomReset()">Zoom reset</div>
+    </div>
+    <div id="d3-chart-container"></div>
+</template>
+
+<script setup lang="ts">
+import { d3Chart } from './d3Chart'
+import { ref } from 'vue'
+import Data from './data.json' with { type: 'json' }
+
+const data = ref(null)
+const orgChart = ref(null)
+
+onMounted(() => {
+    data.value = Data
+    orgChart.value = new d3Chart()
+    orgChart.value.draw(data.value)
+})
+</script>
+
+<style scoped>
+</style>

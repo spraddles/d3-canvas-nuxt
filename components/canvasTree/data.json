@@ -1,0 +1,2304 @@
+{
+  "name": "Way We Do",
+  "children": [
+    {
+      "name": "Solutions",
+      "children": [
+        {
+          "name": "Business Process Management",
+          "children": [
+            {
+              "name": "www"
+            },
+            {
+              "name": "Sign Up To A Free Trial"
+            },
+            {
+              "name": "Contact Us"
+            },
+            {
+              "name": "Contact Us"
+            },
+            {
+              "name": "Contact Sales"
+            },
+            {
+              "name": "Book A Meeting"
+            }
+          ],
+          "children_count": 6
+        },
+        {
+          "name": "Franchising",
+          "children": [
+            {
+              "name": "www"
+            },
+            {
+              "name": "Sign Up To A Free Trial"
+            },
+            {
+              "name": "Contact Sales"
+            },
+            {
+              "name": "Book A Meeting"
+            }
+          ],
+          "children_count": 4
+        },
+        {
+          "name": "Compliance",
+          "children": [
+            {
+              "name": "www"
+            },
+            {
+              "name": "Contact Us"
+            },
+            {
+              "name": "Contact Sales"
+            },
+            {
+              "name": "Book A Meeting"
+            }
+          ],
+          "children_count": 4
+        },
+        {
+          "name": "Ip Protection",
+          "children": [
+            {
+              "name": "www"
+            },
+            {
+              "name": "Bizbuysell"
+            },
+            {
+              "name": "Speak With Us"
+            },
+            {
+              "name": "Sign Up To A Free Trial"
+            },
+            {
+              "name": "Contact Sales"
+            },
+            {
+              "name": "Book A Meeting"
+            }
+          ],
+          "children_count": 6
+        },
+        {
+          "name": "New Employee Onboarding",
+          "children": [
+            {
+              "name": "www"
+            },
+            {
+              "name": "Home"
+            },
+            {
+              "name": "Features"
+            },
+            {
+              "name": "Try Way We Do Free"
+            },
+            {
+              "name": "Watch Video"
+            },
+            {
+              "name": "**Sign Up To A Trial Today**"
+            },
+            {
+              "name": "**Sign Up To A Trial Today**"
+            },
+            {
+              "name": "**Sign Up To A Trial Today**"
+            },
+            {
+              "name": "**Sign Up To A Trial Today**"
+            },
+            {
+              "name": "**Sign Up To A Trial Today**"
+            },
+            {
+              "name": "**Sign Up To A Trial Today**"
+            },
+            {
+              "name": "**Sign Up To A Trial Today**"
+            },
+            {
+              "name": "**Sign Up To A Trial Today**"
+            },
+            {
+              "name": "**Sign Up To A Trial Today**"
+            },
+            {
+              "name": "**Sign Up To A Trial Today**"
+            },
+            {
+              "name": "**Sign Up To A Trial Today**"
+            },
+            {
+              "name": "Contact Sales"
+            },
+            {
+              "name": "Book A Meeting"
+            }
+          ],
+          "children_count": 18
+        },
+        {
+          "name": "Information Security Management System\n(Iso 27001 Isms)",
+          "children": [
+            {
+              "name": "www"
+            },
+            {
+              "name": "Book A Meeting"
+            },
+            {
+              "name": "Sop Software"
+            },
+            {
+              "name": "International Standards"
+            },
+            {
+              "name": "Book A Meeting To Discuss More"
+            },
+            {
+              "name": "Contact Sales"
+            },
+            {
+              "name": "Book A Meeting"
+            }
+          ],
+          "children_count": 7
+        },
+        {
+          "name": "Quality Management Systems (Iso9001 And More)",
+          "children": [
+            {
+              "name": "www"
+            },
+            {
+              "name": "Templates"
+            },
+            {
+              "name": "Automation"
+            },
+            {
+              "name": "Learn More"
+            },
+            {
+              "name": "Learn More"
+            },
+            {
+              "name": "Learn More"
+            },
+            {
+              "name": "How We Help"
+            },
+            {
+              "name": "Problems We Solve"
+            },
+            {
+              "name": "How Way We Do Works"
+            },
+            {
+              "name": "More Features"
+            },
+            {
+              "name": "Contact Sales"
+            },
+            {
+              "name": "Book A Meeting"
+            }
+          ],
+          "children_count": 12
+        },
+        {
+          "name": "Iso 14001 Environmental Management"
+        },
+        {
+          "name": "Iso 45001 Occupational Health & Safety"
+        },
+        {
+          "name": "Franchise Operations Manuals And Compliance"
+        },
+        {
+          "name": "Why Our Company?",
+          "children": [
+            {
+              "name": "www"
+            },
+            {
+              "name": "Book A Meeting"
+            },
+            {
+              "name": "Contact Sales"
+            },
+            {
+              "name": "Book A Meeting"
+            }
+          ],
+          "children_count": 4
+        },
+        {
+          "name": "Why Way We Do The Product?",
+          "children": [
+            {
+              "name": "www"
+            },
+            {
+              "name": "Sign Up To A Free Trial"
+            },
+            {
+              "name": "Contact Sales"
+            },
+            {
+              "name": "Book A Meeting"
+            }
+          ],
+          "children_count": 4
+        },
+        {
+          "name": "Why Change?",
+          "children": [
+            {
+              "name": "www"
+            },
+            {
+              "name": "Email Our Support Team"
+            },
+            {
+              "name": "Start A Free Trial"
+            },
+            {
+              "name": "Contact Sales"
+            },
+            {
+              "name": "Book A Meeting"
+            }
+          ],
+          "children_count": 5
+        },
+        {
+          "name": "Why Now?",
+          "children": [
+            {
+              "name": "www"
+            },
+            {
+              "name": "Sign Up To A Free Trial"
+            },
+            {
+              "name": "Contact Sales"
+            },
+            {
+              "name": "Book A Meeting"
+            }
+          ],
+          "children_count": 4
+        },
+        {
+          "name": "Why Spend The Money?",
+          "children": [
+            {
+              "name": "www"
+            },
+            {
+              "name": "Contact Us"
+            },
+            {
+              "name": "Contact Sales"
+            },
+            {
+              "name": "Book A Meeting"
+            }
+          ],
+          "children_count": 4
+        }
+      ],
+      "children_count": 15
+    },
+    {
+      "name": "Features",
+      "children": [
+        {
+          "name": "Activated Checklists / Workflows",
+          "children": [
+            {
+              "name": "www"
+            },
+            {
+              "name": "Home"
+            },
+            {
+              "name": "Features"
+            },
+            {
+              "name": "Try Way We Do Free"
+            },
+            {
+              "name": "Watch Video"
+            },
+            {
+              "name": "Contact Sales"
+            },
+            {
+              "name": "Book A Meeting"
+            }
+          ],
+          "children_count": 7
+        },
+        {
+          "name": "Stand-alone Procedures",
+          "children": [
+            {
+              "name": "www"
+            },
+            {
+              "name": "Home"
+            },
+            {
+              "name": "Features"
+            },
+            {
+              "name": "Try Way We Do Free"
+            },
+            {
+              "name": "Contact Sales"
+            },
+            {
+              "name": "Book A Meeting"
+            }
+          ],
+          "children_count": 6
+        },
+        {
+          "name": "Organizational Charts",
+          "children": [
+            {
+              "name": "www"
+            },
+            {
+              "name": "Home"
+            },
+            {
+              "name": "Features"
+            },
+            {
+              "name": "Try Way We Do Free"
+            },
+            {
+              "name": "Contact Sales"
+            },
+            {
+              "name": "Book A Meeting"
+            }
+          ],
+          "children_count": 6
+        },
+        {
+          "name": "Recurring Tasks",
+          "children": [
+            {
+              "name": "www"
+            },
+            {
+              "name": "Home"
+            },
+            {
+              "name": "Features"
+            },
+            {
+              "name": "Try Way We Do Free"
+            },
+            {
+              "name": "Contact Sales"
+            },
+            {
+              "name": "Book A Meeting"
+            }
+          ],
+          "children_count": 6
+        },
+        {
+          "name": "Policy And Procedure Acceptance",
+          "children": [
+            {
+              "name": "www"
+            },
+            {
+              "name": "Home"
+            },
+            {
+              "name": "Features"
+            },
+            {
+              "name": "Try Way We Do Free"
+            },
+            {
+              "name": "Contact Sales"
+            },
+            {
+              "name": "Book A Meeting"
+            }
+          ],
+          "children_count": 6
+        },
+        {
+          "name": "View All",
+          "children": [
+            {
+              "name": "www"
+            },
+            {
+              "name": "Learn More"
+            },
+            {
+              "name": "Learn More"
+            },
+            {
+              "name": "Learn More"
+            },
+            {
+              "name": "How We Help"
+            },
+            {
+              "name": "Problems We Solve"
+            },
+            {
+              "name": "How Way We Do Works"
+            },
+            {
+              "name": "Standard Operating Procedures"
+            },
+            {
+              "name": "More Features"
+            },
+            {
+              "name": "Contact Sales"
+            },
+            {
+              "name": "Book A Meeting"
+            }
+          ],
+          "children_count": 11
+        },
+        {
+          "name": "Flowcharts",
+          "children": [
+            {
+              "name": "www"
+            },
+            {
+              "name": "Home"
+            },
+            {
+              "name": "Integrations"
+            },
+            {
+              "name": "sproutvideo"
+            },
+            {
+              "name": "\fSproutvideo: A Perfect Fit With Way We Do"
+            },
+            {
+              "name": "embed-typeform"
+            },
+            {
+              "name": "Boost Way We Do With Typeform Forms"
+            },
+            {
+              "name": "vimeo-videos"
+            },
+            {
+              "name": "Vimeo Videos Let You \fDo More In Way We Do"
+            },
+            {
+              "name": "youtube-videos"
+            },
+            {
+              "name": "\fEngage Way We Do Users With Youtube Videos"
+            },
+            {
+              "name": "dropbox-files"
+            },
+            {
+              "name": "Connect Your Files To Way We Do With Dropbox"
+            },
+            {
+              "name": "Cloud Storage"
+            },
+            {
+              "name": "Documents"
+            },
+            {
+              "name": "Flowcharts"
+            },
+            {
+              "name": "Forms"
+            },
+            {
+              "name": "Quizzes, Surveys & Polls"
+            },
+            {
+              "name": "Slide Shows & Presentations"
+            },
+            {
+              "name": "Video And Audio"
+            },
+            {
+              "name": "gliffy-diagrams"
+            },
+            {
+              "name": "Engage Your Team With Gliffy Diagrams And Way We Do"
+            },
+            {
+              "name": "lucidchart-diagrams"
+            },
+            {
+              "name": "\fPower Up Way We Do With Lucidchart"
+            },
+            {
+              "name": "microsoft-visio-online"
+            },
+            {
+              "name": "Embed Microsoft Visio Online In Way We Do"
+            },
+            {
+              "name": "Contact Sales"
+            },
+            {
+              "name": "Book A Meeting"
+            }
+          ],
+          "children_count": 28
+        },
+        {
+          "name": "Video And Audio",
+          "children": [
+            {
+              "name": "www"
+            },
+            {
+              "name": "Home"
+            },
+            {
+              "name": "Integrations"
+            },
+            {
+              "name": "sproutvideo"
+            },
+            {
+              "name": "\fSproutvideo: A Perfect Fit With Way We Do"
+            },
+            {
+              "name": "embed-typeform"
+            },
+            {
+              "name": "Boost Way We Do With Typeform Forms"
+            },
+            {
+              "name": "vimeo-videos"
+            },
+            {
+              "name": "Vimeo Videos Let You \fDo More In Way We Do"
+            },
+            {
+              "name": "youtube-videos"
+            },
+            {
+              "name": "\fEngage Way We Do Users With Youtube Videos"
+            },
+            {
+              "name": "dropbox-files"
+            },
+            {
+              "name": "Connect Your Files To Way We Do With Dropbox"
+            },
+            {
+              "name": "Cloud Storage"
+            },
+            {
+              "name": "Documents"
+            },
+            {
+              "name": "Flowcharts"
+            },
+            {
+              "name": "Forms"
+            },
+            {
+              "name": "Quizzes, Surveys & Polls"
+            },
+            {
+              "name": "Slide Shows & Presentations"
+            },
+            {
+              "name": "Video And Audio"
+            },
+            {
+              "name": "matterport-virtual-tour"
+            },
+            {
+              "name": "\fWay We Do And Matterport: The Ultimate Show & Tell"
+            },
+            {
+              "name": "embed-soundcloud"
+            },
+            {
+              "name": "Embed Soundcloud Audio In Way We Do Procedures"
+            },
+            {
+              "name": "sproutvideo"
+            },
+            {
+              "name": "\fSproutvideo: A Perfect Fit With Way We Do"
+            },
+            {
+              "name": "vimeo-videos"
+            },
+            {
+              "name": "Vimeo Videos Let You \fDo More In Way We Do"
+            },
+            {
+              "name": "wistia-video"
+            },
+            {
+              "name": "Embed Wistia Video In Way We Do Policies And Procedures"
+            },
+            {
+              "name": "youtube-videos"
+            },
+            {
+              "name": "\fEngage Way We Do Users With Youtube Videos"
+            },
+            {
+              "name": "Contact Sales"
+            },
+            {
+              "name": "Book A Meeting"
+            }
+          ],
+          "children_count": 34
+        },
+        {
+          "name": "Slide Shows & Presentations",
+          "children": [
+            {
+              "name": "www"
+            },
+            {
+              "name": "Home"
+            },
+            {
+              "name": "Integrations"
+            },
+            {
+              "name": "sproutvideo"
+            },
+            {
+              "name": "\fSproutvideo: A Perfect Fit With Way We Do"
+            },
+            {
+              "name": "embed-typeform"
+            },
+            {
+              "name": "Boost Way We Do With Typeform Forms"
+            },
+            {
+              "name": "vimeo-videos"
+            },
+            {
+              "name": "Vimeo Videos Let You \fDo More In Way We Do"
+            },
+            {
+              "name": "youtube-videos"
+            },
+            {
+              "name": "\fEngage Way We Do Users With Youtube Videos"
+            },
+            {
+              "name": "dropbox-files"
+            },
+            {
+              "name": "Connect Your Files To Way We Do With Dropbox"
+            },
+            {
+              "name": "Cloud Storage"
+            },
+            {
+              "name": "Documents"
+            },
+            {
+              "name": "Flowcharts"
+            },
+            {
+              "name": "Forms"
+            },
+            {
+              "name": "Quizzes, Surveys & Polls"
+            },
+            {
+              "name": "Slide Shows & Presentations"
+            },
+            {
+              "name": "Video And Audio"
+            },
+            {
+              "name": "microsoft-sway"
+            },
+            {
+              "name": "\fPolish Your Way We Do Procedure Content With Sway"
+            },
+            {
+              "name": "prezi-presentations"
+            },
+            {
+              "name": "\fPower Up Way We Do With Prezi Presentations"
+            },
+            {
+              "name": "slideshare-presentations"
+            },
+            {
+              "name": "\fMake Your Point In Way We Do With Slideshare"
+            },
+            {
+              "name": "Contact Sales"
+            },
+            {
+              "name": "Book A Meeting"
+            }
+          ],
+          "children_count": 28
+        },
+        {
+          "name": "Forms",
+          "children": [
+            {
+              "name": "www"
+            },
+            {
+              "name": "Home"
+            },
+            {
+              "name": "Integrations"
+            },
+            {
+              "name": "sproutvideo"
+            },
+            {
+              "name": "\fSproutvideo: A Perfect Fit With Way We Do"
+            },
+            {
+              "name": "embed-typeform"
+            },
+            {
+              "name": "Boost Way We Do With Typeform Forms"
+            },
+            {
+              "name": "vimeo-videos"
+            },
+            {
+              "name": "Vimeo Videos Let You \fDo More In Way We Do"
+            },
+            {
+              "name": "youtube-videos"
+            },
+            {
+              "name": "\fEngage Way We Do Users With Youtube Videos"
+            },
+            {
+              "name": "dropbox-files"
+            },
+            {
+              "name": "Connect Your Files To Way We Do With Dropbox"
+            },
+            {
+              "name": "Cloud Storage"
+            },
+            {
+              "name": "Documents"
+            },
+            {
+              "name": "Flowcharts"
+            },
+            {
+              "name": "Forms"
+            },
+            {
+              "name": "Quizzes, Surveys & Polls"
+            },
+            {
+              "name": "Slide Shows & Presentations"
+            },
+            {
+              "name": "Video And Audio"
+            },
+            {
+              "name": "embed-google-forms"
+            },
+            {
+              "name": "Collect Input Fast With Google Forms In Way We Do"
+            },
+            {
+              "name": "smartsheet-app"
+            },
+            {
+              "name": "\fMake An Impact With Smartsheet In Way We Do"
+            },
+            {
+              "name": "embed-typeform"
+            },
+            {
+              "name": "Boost Way We Do With Typeform Forms"
+            },
+            {
+              "name": "Contact Sales"
+            },
+            {
+              "name": "Book A Meeting"
+            }
+          ],
+          "children_count": 28
+        },
+        {
+          "name": "Cloud Storage",
+          "children": [
+            {
+              "name": "www"
+            },
+            {
+              "name": "Home"
+            },
+            {
+              "name": "Integrations"
+            },
+            {
+              "name": "sproutvideo"
+            },
+            {
+              "name": "\fSproutvideo: A Perfect Fit With Way We Do"
+            },
+            {
+              "name": "embed-typeform"
+            },
+            {
+              "name": "Boost Way We Do With Typeform Forms"
+            },
+            {
+              "name": "vimeo-videos"
+            },
+            {
+              "name": "Vimeo Videos Let You \fDo More In Way We Do"
+            },
+            {
+              "name": "youtube-videos"
+            },
+            {
+              "name": "\fEngage Way We Do Users With Youtube Videos"
+            },
+            {
+              "name": "dropbox-files"
+            },
+            {
+              "name": "Connect Your Files To Way We Do With Dropbox"
+            },
+            {
+              "name": "Cloud Storage"
+            },
+            {
+              "name": "Documents"
+            },
+            {
+              "name": "Flowcharts"
+            },
+            {
+              "name": "Forms"
+            },
+            {
+              "name": "Quizzes, Surveys & Polls"
+            },
+            {
+              "name": "Slide Shows & Presentations"
+            },
+            {
+              "name": "Video And Audio"
+            },
+            {
+              "name": "box-cloud-storage"
+            },
+            {
+              "name": "Way We Do And Box App: Better Together"
+            },
+            {
+              "name": "google-drive"
+            },
+            {
+              "name": "Access Google Drive Files Within Way We Do"
+            },
+            {
+              "name": "onedrive-for-business"
+            },
+            {
+              "name": "Onedrive For Business With Way We Do"
+            },
+            {
+              "name": "dropbox-files"
+            },
+            {
+              "name": "Connect Your Files To Way We Do With Dropbox"
+            },
+            {
+              "name": "Contact Sales"
+            },
+            {
+              "name": "Book A Meeting"
+            }
+          ],
+          "children_count": 30
+        },
+        {
+          "name": "Administration Policies And Procedures",
+          "children": [
+            {
+              "name": "www"
+            },
+            {
+              "name": "Home"
+            },
+            {
+              "name": "Procedures"
+            },
+            {
+              "name": "Administration"
+            },
+            {
+              "name": "Finance"
+            },
+            {
+              "name": "Hr"
+            },
+            {
+              "name": "It"
+            },
+            {
+              "name": "Marketing"
+            },
+            {
+              "name": "Sales"
+            },
+            {
+              "name": "When You Sign Up To A Way We Do Account"
+            },
+            {
+              "name": "using-workflow-system"
+            },
+            {
+              "name": "Using Our Workflow System"
+            },
+            {
+              "name": "contact-information"
+            },
+            {
+              "name": "Workplace Contact Information"
+            },
+            {
+              "name": "entering-business-cards-into-the-crm-system"
+            },
+            {
+              "name": "Scan And Enter Business Cards Into The Crm System"
+            },
+            {
+              "name": "picking-up-mail-from-the-post-office"
+            },
+            {
+              "name": "Picking Up Mail From The Post Office"
+            },
+            {
+              "name": "answering-the-telephone"
+            },
+            {
+              "name": "Answering The Telephone Procedure Template"
+            },
+            {
+              "name": "Contact Sales"
+            },
+            {
+              "name": "Book A Meeting"
+            }
+          ],
+          "children_count": 22
+        },
+        {
+          "name": "Finance Policies And Procedures",
+          "children": [
+            {
+              "name": "www"
+            },
+            {
+              "name": "Home"
+            },
+            {
+              "name": "Procedures"
+            },
+            {
+              "name": "Administration"
+            },
+            {
+              "name": "Finance"
+            },
+            {
+              "name": "Hr"
+            },
+            {
+              "name": "It"
+            },
+            {
+              "name": "Marketing"
+            },
+            {
+              "name": "Sales"
+            },
+            {
+              "name": "Sign Up To A Free Trial Today."
+            },
+            {
+              "name": "understanding-cash-flow-position"
+            },
+            {
+              "name": "Understanding Your Cash Flow Position"
+            },
+            {
+              "name": "debt-collection-policy"
+            },
+            {
+              "name": "Debt Collection Policy"
+            },
+            {
+              "name": "purchasing-assets-equipment-policy"
+            },
+            {
+              "name": "Purchasing Assets And Equipment Policy"
+            },
+            {
+              "name": "stock-management-policy"
+            },
+            {
+              "name": "Stock Management Policy"
+            },
+            {
+              "name": "authorizing-new-suppliers-policy"
+            },
+            {
+              "name": "Authorizing New Suppliers Policy"
+            },
+            {
+              "name": "authorizing-new-customers-policy"
+            },
+            {
+              "name": "Authorizing New Customers Policy"
+            },
+            {
+              "name": "business-credit-card-use-policy"
+            },
+            {
+              "name": "Business Credit Card Use Policy"
+            },
+            {
+              "name": "issuing-petty-cash-policy"
+            },
+            {
+              "name": "Issuing Petty Cash Policy"
+            },
+            {
+              "name": "03-bank-account-access-policy"
+            },
+            {
+              "name": "03. Bank Account Access Policy"
+            },
+            {
+              "name": "Load More"
+            },
+            {
+              "name": "Contact Sales"
+            },
+            {
+              "name": "Book A Meeting"
+            }
+          ],
+          "children_count": 31
+        },
+        {
+          "name": "Hr Policies And Procedures",
+          "children": [
+            {
+              "name": "www"
+            },
+            {
+              "name": "Home"
+            },
+            {
+              "name": "Procedures"
+            },
+            {
+              "name": "Administration"
+            },
+            {
+              "name": "Finance"
+            },
+            {
+              "name": "Hr"
+            },
+            {
+              "name": "It"
+            },
+            {
+              "name": "Marketing"
+            },
+            {
+              "name": "Sales"
+            },
+            {
+              "name": "Sign Up To A Free Trial Today."
+            },
+            {
+              "name": "471"
+            },
+            {
+              "name": "Company Property And Facilities Policy Template"
+            },
+            {
+              "name": "team-member-faq"
+            },
+            {
+              "name": "Team Member Faq"
+            },
+            {
+              "name": "stress-reduction-checklist-managers"
+            },
+            {
+              "name": "Stress Reduction Checklist For Managers"
+            },
+            {
+              "name": "cross-training-guidelines"
+            },
+            {
+              "name": "Cross Training Guidelines"
+            },
+            {
+              "name": "cross-training-program-roster"
+            },
+            {
+              "name": "Cross Training Program Roster"
+            },
+            {
+              "name": "recognizing-managing-workplace-stress"
+            },
+            {
+              "name": "Recognizing And Managing Workplace Stress"
+            },
+            {
+              "name": "employee-termination"
+            },
+            {
+              "name": "Employee Termination"
+            },
+            {
+              "name": "leave-entitlements-employees"
+            },
+            {
+              "name": "Leave Entitlements For Employees"
+            },
+            {
+              "name": "submitting-leave-requests"
+            },
+            {
+              "name": "Submitting Leave Requests"
+            },
+            {
+              "name": "Load More"
+            },
+            {
+              "name": "Contact Sales"
+            },
+            {
+              "name": "Book A Meeting"
+            }
+          ],
+          "children_count": 31
+        },
+        {
+          "name": "Marketing Policies And Procedures",
+          "children": [
+            {
+              "name": "www"
+            },
+            {
+              "name": "Home"
+            },
+            {
+              "name": "Procedures"
+            },
+            {
+              "name": "Administration"
+            },
+            {
+              "name": "Finance"
+            },
+            {
+              "name": "Hr"
+            },
+            {
+              "name": "It"
+            },
+            {
+              "name": "Marketing"
+            },
+            {
+              "name": "Sales"
+            },
+            {
+              "name": "Get Started By Creating A Free Trial."
+            },
+            {
+              "name": "create-manage-joint-promotions"
+            },
+            {
+              "name": "Create And Manage Joint Promotions"
+            },
+            {
+              "name": "blog-writing-distribution"
+            },
+            {
+              "name": "Blog Writing And Distribution"
+            },
+            {
+              "name": "email-newsletter-guidelines"
+            },
+            {
+              "name": "Email Newsletter Guidelines"
+            },
+            {
+              "name": "email-marketing-policy"
+            },
+            {
+              "name": "Email Marketing Policy"
+            },
+            {
+              "name": "monitoring-website-analytics"
+            },
+            {
+              "name": "Monitoring Website Analytics"
+            },
+            {
+              "name": "creating-distributing-professional-marketing-videos"
+            },
+            {
+              "name": "Creating And Distributing Professional Marketing Videos"
+            },
+            {
+              "name": "social-media-profiles"
+            },
+            {
+              "name": "Social Media Profiles"
+            },
+            {
+              "name": "marketing-collateral-templates"
+            },
+            {
+              "name": "Marketing Collateral Templates"
+            },
+            {
+              "name": "branding-guidelines"
+            },
+            {
+              "name": "Branding Guidelines"
+            },
+            {
+              "name": "Load More"
+            },
+            {
+              "name": "Contact Sales"
+            },
+            {
+              "name": "Book A Meeting"
+            }
+          ],
+          "children_count": 31
+        },
+        {
+          "name": "Sales Policies And Procedures",
+          "children": [
+            {
+              "name": "www"
+            },
+            {
+              "name": "Home"
+            },
+            {
+              "name": "Procedures"
+            },
+            {
+              "name": "Administration"
+            },
+            {
+              "name": "Finance"
+            },
+            {
+              "name": "Hr"
+            },
+            {
+              "name": "It"
+            },
+            {
+              "name": "Marketing"
+            },
+            {
+              "name": "Sales"
+            },
+            {
+              "name": "Sign Up To A Free Trial To Get Started."
+            },
+            {
+              "name": "recording-client-instructions"
+            },
+            {
+              "name": "Recording Client Instructions"
+            },
+            {
+              "name": "networking-recommendations-guidelines"
+            },
+            {
+              "name": "Networking Recommendations And Guidelines"
+            },
+            {
+              "name": "accepted-proposals"
+            },
+            {
+              "name": "Accepted Proposals"
+            },
+            {
+              "name": "tracking-denied-proposals"
+            },
+            {
+              "name": "Tracking Denied Proposals"
+            },
+            {
+              "name": "preparing-and-sending-proposals"
+            },
+            {
+              "name": "Writing And Sending Proposals"
+            },
+            {
+              "name": "telemarketing-to-a-new-list"
+            },
+            {
+              "name": "Telemarketing To A New List"
+            },
+            {
+              "name": "sales-communication-checklist"
+            },
+            {
+              "name": "Sales Communication Checklist"
+            },
+            {
+              "name": "Contact Sales"
+            },
+            {
+              "name": "Book A Meeting"
+            }
+          ],
+          "children_count": 26
+        }
+      ],
+      "children_count": 16
+    },
+    {
+      "name": "Pricing",
+      "children": [
+        {
+          "name": "www",
+          "children": [
+            {
+              "name": "www"
+            },
+            {
+              "name": "Learn More"
+            },
+            {
+              "name": "Learn More"
+            },
+            {
+              "name": "Learn More"
+            },
+            {
+              "name": "How We Help"
+            },
+            {
+              "name": "Problems We Solve"
+            },
+            {
+              "name": "How Way We Do Works"
+            },
+            {
+              "name": "Standard Operating Procedures"
+            },
+            {
+              "name": "More Features"
+            },
+            {
+              "name": "Contact Sales"
+            },
+            {
+              "name": "Book A Meeting"
+            }
+          ],
+          "children_count": 11
+        },
+        {
+          "name": "Home",
+          "children": [
+            {
+              "name": "www"
+            },
+            {
+              "name": "Learn More"
+            },
+            {
+              "name": "Learn More"
+            },
+            {
+              "name": "Learn More"
+            },
+            {
+              "name": "How We Help"
+            },
+            {
+              "name": "Problems We Solve"
+            },
+            {
+              "name": "How Way We Do Works"
+            },
+            {
+              "name": "Standard Operating Procedures"
+            },
+            {
+              "name": "More Features"
+            },
+            {
+              "name": "Contact Sales"
+            },
+            {
+              "name": "Book A Meeting"
+            }
+          ],
+          "children_count": 11
+        },
+        {
+          "name": "Start A Free Trial"
+        },
+        {
+          "name": "Contact Sales",
+          "children": [
+            {
+              "name": "www"
+            },
+            {
+              "name": "Learn More"
+            },
+            {
+              "name": "Learn More"
+            },
+            {
+              "name": "Learn More"
+            },
+            {
+              "name": "How We Help"
+            },
+            {
+              "name": "Problems We Solve"
+            },
+            {
+              "name": "How Way We Do Works"
+            },
+            {
+              "name": "Standard Operating Procedures"
+            },
+            {
+              "name": "More Features"
+            },
+            {
+              "name": "Contact Sales"
+            },
+            {
+              "name": "Book A Meeting"
+            }
+          ],
+          "children_count": 11
+        },
+        {
+          "name": "Book A Meeting",
+          "children": [
+            {
+              "name": "www"
+            },
+            {
+              "name": "Learn More"
+            },
+            {
+              "name": "Learn More"
+            },
+            {
+              "name": "Learn More"
+            },
+            {
+              "name": "How We Help"
+            },
+            {
+              "name": "Problems We Solve"
+            },
+            {
+              "name": "How Way We Do Works"
+            },
+            {
+              "name": "Standard Operating Procedures"
+            },
+            {
+              "name": "More Features"
+            },
+            {
+              "name": "Contact Sales"
+            },
+            {
+              "name": "Book A Meeting"
+            }
+          ],
+          "children_count": 11
+        }
+      ],
+      "children_count": 5
+    },
+    {
+      "name": "Resources",
+      "children": [
+        {
+          "name": "Upcoming Webinars",
+          "children": [
+            {
+              "name": "www"
+            },
+            {
+              "name": "Way We Do Basics - Usa & Canada\nLearn About The Basics Of The Way We Do Platform. If You Are Located In The Usa Or Canada Select This Option To Find Available Webinar Dates And Times. Held Fortnightly On A Thursday 4pm Est."
+            },
+            {
+              "name": "Automation Basics - Usa & Canada\nLearn How To Integrate Way We Do With Your 3rd Party Applications And Automate Processes. If You Are Located In The Usa Or Canada Select This Option To Find Available Webinar Dates And Times. Held On Alternative Fortnights (To The Way We Do Basics Webinar) On A Thursday 4pm Est."
+            },
+            {
+              "name": "Way We Do Basics - Uk, Europe, Middle East & Africa\nLearn About The Basics Of The Way We Do Platform. If You Are Located In The Uk, Europe, Middle East Or Africa, Select This Option To Find Available Webinar Dates And Times. Held Fortnightly On Wednesdays At 9am London Time."
+            },
+            {
+              "name": "Automation Basics - Uk, Europe, Middle East & Africa\nLearn How To Integrate Way We Do With Your 3rd Party Applications And Automate Processes. If You Are Located In The Uk, Europe, Middle East Or Africa, Select This Option To Find Available Webinar Dates And Times. Held On Alternative Fortnights (To The Way We Do Basics Webinar) On A Wednesday 9am London Time."
+            },
+            {
+              "name": "Way We Do Basics - Australia, New Zealand & Asia\nLearn About The Basics Of The Way We Do Platform. If You Are Located In Australia, New Zealand, Asia Pacific Or Asia, Select This Option To Find Available Webinar Dates And Times. Held Fortnightly On A Tuesday At 11am Brisbane Time."
+            },
+            {
+              "name": "Automation Basics - Australia, New Zealand & Asia\nLearn How To Integrate Way We Do With Your 3rd Party Applications And Automate Processes. If You Are Located In Australia, New Zealand, Asia Pacific Or Asia, Select This Option To Find Available Webinar Dates And Times. Held On Alternative Fortnights (To The Way We Do Basics Webinar) On A Tuesday 11am Brisbane Time."
+            },
+            {
+              "name": "Contact Us"
+            },
+            {
+              "name": "Contact Sales"
+            },
+            {
+              "name": "Book A Meeting"
+            }
+          ],
+          "children_count": 10
+        },
+        {
+          "name": "Training At Way We Do",
+          "children": [
+            {
+              "name": "www"
+            },
+            {
+              "name": "Contact Sales"
+            },
+            {
+              "name": "Book A Meeting"
+            }
+          ],
+          "children_count": 3
+        },
+        {
+          "name": "Book A Pro-assistance Session",
+          "children": [
+            {
+              "name": "www"
+            },
+            {
+              "name": "Book A Meeting With Us"
+            },
+            {
+              "name": "Usa & Canada\nIf You Are A Way We Do Subscriber Located In The Usa Or Canada Select This Option To Book A Meeting Time."
+            },
+            {
+              "name": "Uk, Europe, Middle East & Africa\nIf You Are A Way We Do Subscriber Located In The Uk, Europe, Middle East Or Africa, Select This Option To Book A Meeting Time."
+            },
+            {
+              "name": "Australia, New Zealand & Asia\nIf You Are A Way We Do Subscriber Located In Australia, New Zealand, Asia Pacific Or Asia, Select This Option To Book A Meeting Time."
+            },
+            {
+              "name": "Contact Us"
+            },
+            {
+              "name": "Contact Sales"
+            },
+            {
+              "name": "Book A Meeting"
+            }
+          ],
+          "children_count": 8
+        },
+        {
+          "name": "Blog",
+          "children": [
+            {
+              "name": "www"
+            },
+            {
+              "name": "Create A Free Way We Do Trial"
+            },
+            {
+              "name": "(New) Instant Flowcharts:\nElevate Your Business"
+            },
+            {
+              "name": "Business Process Management"
+            },
+            {
+              "name": "facebook"
+            },
+            {
+              "name": "twitter"
+            },
+            {
+              "name": "linkedin"
+            },
+            {
+              "name": "Using Way We Do"
+            },
+            {
+              "name": "Business Continuity"
+            },
+            {
+              "name": "Business Process Management"
+            },
+            {
+              "name": "blog"
+            },
+            {
+              "name": "new-instant-flowcharts"
+            },
+            {
+              "name": "Business Process Management"
+            },
+            {
+              "name": "(New) Instant Flowcharts:\nElevate Your Business"
+            },
+            {
+              "name": "how-to-simplify-a-complex-process"
+            },
+            {
+              "name": "Business Process Management"
+            },
+            {
+              "name": "How To Simplify A Complex Process"
+            },
+            {
+              "name": "earth-day-2024"
+            },
+            {
+              "name": "Environment Social Governance"
+            },
+            {
+              "name": "Earth Day 2024: Businesses Shine In Climate Action"
+            },
+            {
+              "name": "forgetting-curve"
+            },
+            {
+              "name": "Training Management"
+            },
+            {
+              "name": "Combat The Forgetting Curve With “Just-in-time” Training"
+            },
+            {
+              "name": "create-sales-activators"
+            },
+            {
+              "name": "Sales & Business Development"
+            },
+            {
+              "name": "Create Sales Activators To Grow Professional Services Revenue"
+            },
+            {
+              "name": "prepare-an-ai-policy"
+            },
+            {
+              "name": "Management"
+            },
+            {
+              "name": "6 Steps To Prepare An Ai Policy — Aligned With Iso42001"
+            },
+            {
+              "name": "principles-in-action"
+            },
+            {
+              "name": "Management"
+            },
+            {
+              "name": "Principles In Action: Shape Strategy, Foster Alignment In Business"
+            },
+            {
+              "name": "competent-managers"
+            },
+            {
+              "name": "Management"
+            },
+            {
+              "name": "Build Trust Through Competence: A Guide For Managers"
+            },
+            {
+              "name": "health-safety-management-system"
+            },
+            {
+              "name": "Using Way We Do"
+            },
+            {
+              "name": "Creating A Health And Safety Management System (Hsms)"
+            },
+            {
+              "name": "Load More"
+            },
+            {
+              "name": "Contact Sales"
+            },
+            {
+              "name": "Book A Meeting"
+            }
+          ],
+          "children_count": 41
+        },
+        {
+          "name": "Time Wasters Calculator",
+          "children": [
+            {
+              "name": "www"
+            },
+            {
+              "name": "A Clear Path"
+            },
+            {
+              "name": "The Muse"
+            },
+            {
+              "name": "Optimized Policies, Procedures, Processes And Playbooks."
+            },
+            {
+              "name": "Start A Free Trial"
+            }
+          ],
+          "children_count": 5
+        },
+        {
+          "name": "Create A Trial Account",
+          "children": [
+            {
+              "name": "I Have A Promo Code"
+            },
+            {
+              "name": "Terms And Conditions"
+            }
+          ],
+          "children_count": 2
+        },
+        {
+          "name": "Book A Live Demo Or Other Meeting",
+          "children": [
+            {
+              "name": "www"
+            },
+            {
+              "name": "Usa & Canada\nIf You Are Located In The Usa Or Canada Select This Option To Book A Meeting Time."
+            },
+            {
+              "name": "Uk, Europe, Middle East & Africa\nIf You Are Located In The Uk, Europe, Middle East Or Africa, Select This Option To Book A Meeting Time."
+            },
+            {
+              "name": "Australia, New Zealand & Asia\nIf You Are Located In Australia, New Zealand, Asia Pacific Or Asia, Select This Option To Book A Meeting Time."
+            },
+            {
+              "name": "Contact Us"
+            },
+            {
+              "name": "Contact Sales"
+            },
+            {
+              "name": "Book A Meeting"
+            }
+          ],
+          "children_count": 7
+        },
+        {
+          "name": "Search Our Knowledge Base",
+          "children": [
+            {
+              "name": "en"
+            },
+            {
+              "name": "Go To Way We Do"
+            },
+            {
+              "name": "01. Your First Steps With Way We Do\n\nExplore \"Your First Steps\" To Quickly Learn The Essentials And Become A Pro In No Time!\n\nBy Dan And 2 Others\n88 Articles"
+            },
+            {
+              "name": "02. Sop Management\n\nExplore Sop Management To Learn How To Create And Optimize Standard Operating Procedures For Operational Excellence\n\nBy Andrew And 2 Others\n155 Articles"
+            },
+            {
+              "name": "03. Team Member Training Center\n\nSupport Articles To Train Your Team On How To Use Way We Do\n\nBy Andrew\n11 Articles"
+            },
+            {
+              "name": "04. Workflow & Automation\n\nBrowse The Workflow And Automation Category To Learn How To Leverage Way We Do's Activated Checklist For Streamlined Processes And Automation.\n\nBy Dan And 2 Others\n3 Articles"
+            },
+            {
+              "name": "05. Integrating With 3rd Party Apps\n\nLearn How To Seamlessly Connect Way We Do With Your Favorite External Tools And Platforms.\n\nBy Dan\n9 Articles"
+            },
+            {
+              "name": "06. Reporting\n\nExplore The Reporting Section To Understand How To Generate And Analyze Data-driven Insights Using Way We Do's Features\n\nBy Dan And 1 Other\n10 Articles"
+            },
+            {
+              "name": "07. About Way We Do\n\nGain A Comprehensive Understanding Of Way We Do's Mission, Features, And The Team Behind Your Operational Success\n\nBy Dan And 1 Other\n18 Articles"
+            },
+            {
+              "name": "08. Release Log\n\nCheck Out The Release Log Section To Stay Updated On The Latest Features And Improvements In The Way We Do Platform.\n\nBy Dan\n1 Article"
+            },
+            {
+              "name": "en"
+            },
+            {
+              "name": "facebook"
+            },
+            {
+              "name": "twitter"
+            },
+            {
+              "name": "linkedin"
+            }
+          ],
+          "children_count": 14
+        },
+        {
+          "name": "Frequently Asked Questions",
+          "children": [
+            {
+              "name": "www"
+            },
+            {
+              "name": "Contact Our Support Team"
+            },
+            {
+              "name": "Contact Our Team"
+            },
+            {
+              "name": "Contact Our Support Team"
+            },
+            {
+              "name": "Book A Meeting"
+            },
+            {
+              "name": "View Our Knowledge Base"
+            },
+            {
+              "name": "Contact Sales"
+            },
+            {
+              "name": "Book A Meeting"
+            }
+          ],
+          "children_count": 8
+        },
+        {
+          "name": "Contact Us",
+          "children": [
+            {
+              "name": "www"
+            },
+            {
+              "name": "Home"
+            },
+            {
+              "name": "Book A Live Demo Or Training Session"
+            },
+            {
+              "name": "Search Our Knowledge Base"
+            },
+            {
+              "name": "Australia"
+            },
+            {
+              "name": "Usa"
+            },
+            {
+              "name": "Contact Sales"
+            },
+            {
+              "name": "Book A Meeting"
+            }
+          ],
+          "children_count": 8
+        },
+        {
+          "name": "Join Our Newsletter",
+          "children": [
+            {
+              "name": "www"
+            },
+            {
+              "name": "Learn More"
+            },
+            {
+              "name": "Learn More"
+            },
+            {
+              "name": "Learn More"
+            },
+            {
+              "name": "How We Help"
+            },
+            {
+              "name": "Problems We Solve"
+            },
+            {
+              "name": "How Way We Do Works"
+            },
+            {
+              "name": "Standard Operating Procedures"
+            },
+            {
+              "name": "More Features"
+            },
+            {
+              "name": "Contact Sales"
+            },
+            {
+              "name": "Book A Meeting"
+            }
+          ],
+          "children_count": 11
+        },
+        {
+          "name": "Partners",
+          "children": [
+            {
+              "name": "www"
+            },
+            {
+              "name": "Usa & Canada\nIf You Are Located In The Usa Or Canada Select This Option To Book A Discovery Meeting Time."
+            },
+            {
+              "name": "Uk, Europe, Middle East & Africa\nIf You Are Located In The Uk, Europe, Middle East Or Africa, Select This Option To Book A Discovery Meeting Time."
+            },
+            {
+              "name": "Australia, New Zealand & Asia\nIf You Are Located In Australia, New Zealand, Asia Pacific Or Asia, Select This Option To Book A Discovery Meeting Time."
+            },
+            {
+              "name": "Contact Us"
+            },
+            {
+              "name": "Contact Sales"
+            },
+            {
+              "name": "Book A Meeting"
+            }
+          ],
+          "children_count": 7
+        }
+      ],
+      "children_count": 12
+    },
+    {
+      "name": "Login",
+      "children": [
+        {
+          "name": "www",
+          "children": [
+            {
+              "name": "www"
+            },
+            {
+              "name": "Learn More"
+            },
+            {
+              "name": "Learn More"
+            },
+            {
+              "name": "Learn More"
+            },
+            {
+              "name": "How We Help"
+            },
+            {
+              "name": "Problems We Solve"
+            },
+            {
+              "name": "How Way We Do Works"
+            },
+            {
+              "name": "Standard Operating Procedures"
+            },
+            {
+              "name": "More Features"
+            },
+            {
+              "name": "Contact Sales"
+            },
+            {
+              "name": "Book A Meeting"
+            }
+          ],
+          "children_count": 11
+        },
+        {
+          "name": "Way We Do Support"
+        },
+        {
+          "name": "Register Now"
+        },
+        {
+          "name": "Contact Sales",
+          "children": [
+            {
+              "name": "www"
+            },
+            {
+              "name": "Learn More"
+            },
+            {
+              "name": "Learn More"
+            },
+            {
+              "name": "Learn More"
+            },
+            {
+              "name": "How We Help"
+            },
+            {
+              "name": "Problems We Solve"
+            },
+            {
+              "name": "How Way We Do Works"
+            },
+            {
+              "name": "Standard Operating Procedures"
+            },
+            {
+              "name": "More Features"
+            },
+            {
+              "name": "Contact Sales"
+            },
+            {
+              "name": "Book A Meeting"
+            }
+          ],
+          "children_count": 11
+        },
+        {
+          "name": "Book A Meeting",
+          "children": [
+            {
+              "name": "www"
+            },
+            {
+              "name": "Learn More"
+            },
+            {
+              "name": "Learn More"
+            },
+            {
+              "name": "Learn More"
+            },
+            {
+              "name": "How We Help"
+            },
+            {
+              "name": "Problems We Solve"
+            },
+            {
+              "name": "How Way We Do Works"
+            },
+            {
+              "name": "Standard Operating Procedures"
+            },
+            {
+              "name": "More Features"
+            },
+            {
+              "name": "Contact Sales"
+            },
+            {
+              "name": "Book A Meeting"
+            }
+          ],
+          "children_count": 11
+        }
+      ],
+      "children_count": 5
+    },
+    {
+      "name": "Free Trial",
+      "children": [
+        {
+          "name": "I Have A Promo Code"
+        },
+        {
+          "name": "Terms And Conditions",
+          "children": [
+            {
+              "name": "www"
+            },
+            {
+              "name": "Learn More"
+            },
+            {
+              "name": "Learn More"
+            },
+            {
+              "name": "Learn More"
+            },
+            {
+              "name": "How We Help"
+            },
+            {
+              "name": "Problems We Solve"
+            },
+            {
+              "name": "How Way We Do Works"
+            },
+            {
+              "name": "Standard Operating Procedures"
+            },
+            {
+              "name": "More Features"
+            },
+            {
+              "name": "Contact Sales"
+            },
+            {
+              "name": "Book A Meeting"
+            }
+          ],
+          "children_count": 11
+        }
+      ],
+      "children_count": 2
+    },
+    {
+      "name": "Page Links",
+      "children": [
+        {
+          "name": "www"
+        },
+        {
+          "name": "Learn More"
+        },
+        {
+          "name": "Learn More"
+        },
+        {
+          "name": "Learn More"
+        },
+        {
+          "name": "How We Help"
+        },
+        {
+          "name": "Problems We Solve"
+        },
+        {
+          "name": "How Way We Do Works"
+        },
+        {
+          "name": "Standard Operating Procedures"
+        },
+        {
+          "name": "More Features"
+        },
+        {
+          "name": "Contact Sales"
+        },
+        {
+          "name": "Book A Meeting"
+        }
+      ],
+      "children_count": 11
+    },
+    {
+      "name": "Footer Links",
+      "children": [
+        {
+          "name": "Features"
+        },
+        {
+          "name": "Integrations & Embeds"
+        },
+        {
+          "name": "Procedure Templates"
+        },
+        {
+          "name": "Create A Trial Account"
+        },
+        {
+          "name": "Book A Live Demo Or Meeting"
+        },
+        {
+          "name": "Book A Pro-assistance Session"
+        },
+        {
+          "name": "Upcoming Webinars"
+        },
+        {
+          "name": "Search Knowledge Base"
+        },
+        {
+          "name": "Contact Us"
+        },
+        {
+          "name": "Supply Agreement"
+        },
+        {
+          "name": "Privacy Policy & Gdpr"
+        },
+        {
+          "name": "Gdpr Compliance Certificate (Eur)"
+        },
+        {
+          "name": "Gdpr Compliance Certificate (Uk)"
+        },
+        {
+          "name": "Security Policy"
+        },
+        {
+          "name": "Way We Do Sub-processors"
+        }
+      ],
+      "children_count": 15
+    }
+  ],
+  "children_count": 6
+}

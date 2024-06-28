@@ -1,0 +1,1 @@
+export { default } from "file:///Users/brettspradbury/Downloads/tmp/apps/nuxt-d3-canvas/node_modules/@nuxt/vite-builder/dist/runtime/client.manifest.mjs"
