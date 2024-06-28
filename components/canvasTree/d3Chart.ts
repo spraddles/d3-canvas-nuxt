@@ -168,16 +168,16 @@ export class d3Chart {
 
         linkSelection
             .attr('class', 'link')
-            .attr('sourceX', function (linkData) { return linkData.source['x00'] })
-            .attr('sourceY', function (linkData) { return linkData.source['y00'] })
-            .attr('targetX', function (linkData) { return linkData.target['x00'] })
-            .attr('targetY', function (linkData) { return linkData.target['y00'] })
+            .attr('sourceX', function (link) { return isHorizontal ? link.source['x00'] : link.source['y00'] })
+            .attr('sourceY', function (link) { return isHorizontal ? link.source['y00'] : link.source['x00'] })
+            .attr('targetX', function (link) { return isHorizontal ? link.target['x00'] : link.target['y00'] })
+            .attr('targetY', function (link) { return isHorizontal ? link.target['y00'] : link.target['x00'] })
             .transition()
             .duration(this.duration)
-            .attr('sourceX', function (linkData) { return linkData.source.x })
-            .attr('sourceY', function (linkData) { return linkData.source.y })
-            .attr('targetX', function (linkData) { return linkData.target.x })
-            .attr('targetY', function (linkData) { return linkData.target.y })
+            .attr('sourceX', function (link) { return isHorizontal ? link.source.x : link.source.y })
+            .attr('sourceY', function (link) { return isHorizontal ? link.source.y : link.source.x })
+            .attr('targetX', function (link) { return isHorizontal ? link.target.x : link.target.y })
+            .attr('targetY', function (link) { return isHorizontal ? link.target.y : link.target.x })
 
         linkSelection
             .enter()
@@ -394,15 +394,13 @@ export class d3Chart {
         console.log('log 1')
         const self = this
         this.canvasNode.node().addEventListener('click', (e) => {
-            console.log('log 2')
+            console.log(`log 2:  x: ${e.layerX}  y: ${e.layerY}`)
             const colorStr = getColorStringFromCanvas(
                 self.hiddenContext,
                 e.layerX,
                 e.layerY
             )
-            console.log('colorStr: ', colorStr)
             const node = self.colorNodeMap[colorStr]
-            console.log('node: ', node)
             if (node) {
                 console.log('log 3')
                 self.toggleTreeNode(node.data()[0])

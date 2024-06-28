@@ -1,3 +1,5 @@
+export const isHorizontal = false
+
 export const text = (ctx, text, x, y, fontSize, fontColor) => {
     ctx.font = '14px Arial';
     ctx.fillStyle = fontColor;
@@ -70,5 +72,3 @@ export const randomColor = (): string => {
     }
     return color
 }
-
-export const isHorizontal = true
