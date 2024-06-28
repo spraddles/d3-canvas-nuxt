@@ -59,7 +59,7 @@ export class d3Chart {
         this.treeGenerator =
             this.d3
                 .tree()
-                .nodeSize([this.nodeWidth, this.nodeHeight]) // swap nodeWidth and nodeHeight for vertical layout
+                .nodeSize([this.nodeWidth, this.nodeHeight])
         this.update(null)
 
         const self = this
@@ -84,7 +84,6 @@ export class d3Chart {
             animatedEndX = targetTreeNode.x
             animatedEndY = targetTreeNode.y
         }
-
         this.updateOrgUnits(
             nodes,
             animatedStartX,
@@ -117,50 +116,38 @@ export class d3Chart {
 
         orgUnitSelection
             .attr('class', 'orgUnit')
-            .attr('x', function (data) {
-                return isHorizontal ? data.x0 : data.y0 // swap x and y for vertical layout
-            })
-            .attr('y', function (data) {
-                return isHorizontal ? data.y0 : data.x0 // swap x and y for vertical layout
-            })
+            .attr('x', function (data) { return isHorizontal ? data.x0 : data.y0 })
+            .attr('y', function (data) { return isHorizontal ? data.y0 : data.x0 })
             .transition()
             .duration(this.duration)
-            .attr('x', function (data) {
-                return isHorizontal ? data.x : data.y // swap x and y for vertical layout
-            })
-            .attr('y', function (data) {
-                return isHorizontal ? data.y : data.x // swap x and y for vertical layout
-            })
+            .attr('x', function (data) { return isHorizontal ? data.x : data.y })
+            .attr('y', function (data) { return isHorizontal ? data.y : data.x })
             .attr('fillStyle', '#ff0000')
 
         orgUnitSelection
             .enter()
             .append('orgUnit')
             .attr('class', 'orgUnit')
-            .attr('x', isHorizontal ? animatedStartX : animatedStartY) // swap x and y for vertical layout
-            .attr('y', isHorizontal ? animatedStartY : animatedStartX) // swap x and y for vertical layout
+            .attr('x', isHorizontal ? animatedStartX : animatedStartY)
+            .attr('y', isHorizontal ? animatedStartY : animatedStartX)
             .transition()
             .duration(this.duration)
-            .attr('x', function (data) {
-                return isHorizontal ? data.x : data.y // swap x and y for vertical layout
-            })
-            .attr('y', function (data) {
-                return isHorizontal ? data.y : data.x // swap x and y for vertical layout
-            })
+            .attr('x', function (data) { return isHorizontal ? data.x : data.y })
+            .attr('y', function (data) { return isHorizontal ? data.y : data.x })
             .attr('fillStyle', '#ff0000')
 
         orgUnitSelection
             .exit()
             .transition()
             .duration(this.duration)
-            .attr('x', isHorizontal ? animatedEndX : animatedEndY) // swap x and y for vertical layout
-            .attr('y', isHorizontal ? animatedEndY : animatedEndX) // swap x and y for vertical layout
+            .attr('x', isHorizontal ? animatedEndX : animatedEndY)
+            .attr('y', isHorizontal ? animatedEndY : animatedEndX)
             .remove()
 
         // record origin index for animation
         nodes.forEach((treeNode) => {
-            treeNode['x0'] = isHorizontal ? treeNode.x : treeNode.y // swap x and y for vertical layout
-            treeNode['y0'] = isHorizontal ? treeNode.y : treeNode.x // swap x and y for vertical layout
+            treeNode['x0'] = isHorizontal ? treeNode.x : treeNode.y
+            treeNode['y0'] = isHorizontal ? treeNode.y : treeNode.x
         })
 
         orgUnitSelection = null
@@ -181,69 +168,44 @@ export class d3Chart {
 
         linkSelection
             .attr('class', 'link')
-            .attr('sourceX', function (linkData) {
-                return linkData.source['x00']
-            })
-            .attr('sourceY', function (linkData) {
-                return linkData.source['y00']
-            })
-            .attr('targetX', function (linkData) {
-                return linkData.target['x00']
-            })
-            .attr('targetY', function (linkData) {
-                return linkData.target['y00']
-            })
+            .attr('sourceX', function (linkData) { return linkData.source['x00'] })
+            .attr('sourceY', function (linkData) { return linkData.source['y00'] })
+            .attr('targetX', function (linkData) { return linkData.target['x00'] })
+            .attr('targetY', function (linkData) { return linkData.target['y00'] })
             .transition()
             .duration(this.duration)
-            .attr('sourceX', function (linkData) {
-                return linkData.source.x
-            })
-            .attr('sourceY', function (linkData) {
-                return linkData.source.y
-            })
-            .attr('targetX', function (linkData) {
-                return linkData.target.x
-            })
-            .attr('targetY', function (linkData) {
-                return linkData.target.y
-            })
+            .attr('sourceX', function (linkData) { return linkData.source.x })
+            .attr('sourceY', function (linkData) { return linkData.source.y })
+            .attr('targetX', function (linkData) { return linkData.target.x })
+            .attr('targetY', function (linkData) { return linkData.target.y })
 
         linkSelection
             .enter()
             .append('link')
             .attr('class', 'link')
-            .attr('sourceX', isHorizontal ? animatedStartX : animatedStartY) // swap x and y for vertical layout
-            .attr('sourceY', isHorizontal ? animatedStartY : animatedStartX) // swap x and y for vertical layout
-            .attr('targetX', isHorizontal ? animatedStartX : animatedStartY) // swap x and y for vertical layout
-            .attr('targetY', isHorizontal ? animatedStartY : animatedStartX) // swap x and y for vertical layout
+            .attr('sourceX', isHorizontal ? animatedStartX : animatedStartY)
+            .attr('sourceY', isHorizontal ? animatedStartY : animatedStartX)
+            .attr('targetX', isHorizontal ? animatedStartX : animatedStartY)
+            .attr('targetY', isHorizontal ? animatedStartY : animatedStartX)
             .transition()
             .duration(this.duration)
-            .attr('sourceX', function (link) {
-                return isHorizontal ? link.source.x : link.source.y // swap x and y for vertical layout
-            })
-            .attr('sourceY', function (link) {
-                return isHorizontal ? link.source.y : link.source.x // swap x and y for vertical layout
-            })
-            .attr('targetX', function (link) {
-                return isHorizontal ? link.target.x : link.target.y // swap x and y for vertical layout
-            })
-            .attr('targetY', function (link) {
-                return isHorizontal ? link.target.y : link.target.x // swap x and y for vertical layout
-            })
+            .attr('sourceX', function (link) { return isHorizontal ? link.source.x : link.source.y })
+            .attr('sourceY', function (link) { return isHorizontal ? link.source.y : link.source.x })
+            .attr('targetX', function (link) { return isHorizontal ? link.target.x : link.target.y })
+            .attr('targetY', function (link) { return isHorizontal ? link.target.y : link.target.x })
 
         linkSelection
             .exit()
             .transition()
             .duration(this.duration)
-            .attr('sourceX', isHorizontal ? animatedEndX : animatedEndY) // swap x and y for vertical layout
-            .attr('sourceY', isHorizontal ? animatedEndY : animatedEndX) // swap x and y for vertical layout
-            .attr('targetX', isHorizontal ? animatedEndX : animatedEndY) // swap x and y for vertical layout
-            .attr('targetY', isHorizontal ? animatedEndY : animatedEndX) // swap x and y for vertical layout
+            .attr('sourceX', isHorizontal ? animatedEndX : animatedEndY)
+            .attr('sourceY', isHorizontal ? animatedEndY : animatedEndX)
+            .attr('targetX', isHorizontal ? animatedEndX : animatedEndY)
+            .attr('targetY', isHorizontal ? animatedEndY : animatedEndX)
             .remove()
 
         // record origin data for animation
         links.forEach((treeNode) => {
-            // swap x and y for vertical layout
             treeNode.source['x00'] = isHorizontal ? treeNode.source.x : treeNode.source.y
             treeNode.source['y00'] = isHorizontal ? treeNode.source.y : treeNode.source.x
             treeNode.target['x00'] = isHorizontal ? treeNode.target.x : treeNode.target.y
@@ -323,7 +285,6 @@ export class d3Chart {
     }
 
     bindNodeToTreeData() {
-        // give each node a unique color
         const self = this
         this.virtualContainerNode.selectAll('.orgUnit').each(function () {
             const node = self.d3.select(this)
@@ -333,14 +294,13 @@ export class d3Chart {
     }
 
     drawCanvas() {
-        this.clearCanvas_() // clear the canvas before drawing
+        this.clearCanvas_()
         this.drawShowCanvas()
         this.drawHiddenCanvas()
     }
 
     drawShowCanvas() {
-        this.context.clearRect(-this.width / 2, -this.padding, this.width, this.height) // clear the visible context
-
+        this.context.clearRect(-this.width / 2, -this.padding, this.width, this.height)
         const self = this
         // draw links
         this.virtualContainerNode.selectAll('.link').each(function () {
@@ -405,11 +365,8 @@ export class d3Chart {
         })
     }
 
-    // fill the node outline with colorKey color
-
     drawHiddenCanvas() {
-        this.hiddenContext.clearRect(-this.width / 2, -this.padding, this.width, this.height) // clear the hidden context
-
+        this.hiddenContext.clearRect(-this.width / 2, -this.padding, this.width, this.height)
         const self = this
         this.virtualContainerNode.selectAll('.orgUnit').each(function () {
             const node = self.d3.select(this)
@@ -475,34 +432,24 @@ export class d3Chart {
             self.dragStartPoint_.y = e.y
             self.onDrag_ = true
         }
-
         this.canvasNode.node().onmousemove = function (e) {
             if (!self.onDrag_) {
                 return
             }
-
             const deltaX = (e.x - self.dragStartPoint_.x) / self.scale;
             const deltaY = (e.y - self.dragStartPoint_.y) / self.scale;
-
-            // update the translation
             self.context.translate(deltaX, deltaY);
             self.hiddenContext.translate(deltaX, deltaY);
-
-            // update the drag start point
             self.dragStartPoint_.x = e.x;
             self.dragStartPoint_.y = e.y;
-
-            // clear and redraw the canvas
             self.clearCanvas_();
             self.drawCanvas();
         }
-
         this.canvasNode.node().onmouseout = function (e) {
             if (self.onDrag_) {
                 self.onDrag_ = false
             }
         }
-
         this.canvasNode.node().onmouseup = function (e) {
             if (self.onDrag_) {
                 self.onDrag_ = false
