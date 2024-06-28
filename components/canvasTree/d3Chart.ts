@@ -214,52 +214,33 @@ export class d3Chart {
         linkSelection = null
     }
 
-    // initCanvas() {
-    //     this.container = this.d3.select('#d3-chart-container')
-
-    //     const dpr = window.devicePixelRatio || 1;
-    //     this.canvasNode = this.container
-    //         .append('canvas')
-    //         .attr('class', 'orgChart')
-    //         .attr('width', this.width * dpr)
-    //         .attr('height', this.height * dpr)
-    //         .style('width', `${this.width}px`)
-    //         .style('height', `${this.height}px`)
-
-    //     this.hiddenCanvasNode = this.container
-    //         .append('canvas')
-    //         .attr('class', 'orgChart')
-    //         .attr('width', this.width * dpr)
-    //         .attr('height', this.height * dpr)
-    //         .style('width', `${this.width}px`)
-    //         .style('height', `${this.height}px`)
-    //         .style('display', '')
-
-    //     this.context = this.canvasNode.node().getContext('2d')
-    //     this.context.scale(dpr, dpr)
-    //     this.context.translate(this.width / 2, this.padding)
-
-    //     this.hiddenContext = this.hiddenCanvasNode.node().getContext('2d')
-    //     this.hiddenContext.scale(dpr, dpr)
-    //     this.hiddenContext.translate(this.width / 2, this.padding)
-    // }
-
     initCanvas() {
         this.container = this.d3.select('#d3-chart-container')
+        const dpr = window.devicePixelRatio || 1;
+
         this.canvasNode = this.container
             .append('canvas')
             .attr('class', 'orgChart')
-            .attr('width', this.width)
-            .attr('height', this.height)
+            .attr('width', this.width * dpr)
+            .attr('height', this.height * dpr)
+            .style('width', `${this.width}px`)
+            .style('height', `${this.height}px`)
+
         this.hiddenCanvasNode = this.container
             .append('canvas')
             .attr('class', 'orgChart')
-            .attr('width', this.width)
-            .attr('height', this.height)
+            .attr('width', this.width * dpr)
+            .attr('height', this.height * dpr)
+            .style('width', `${this.width}px`)
+            .style('height', `${this.height}px`)
             .style('display', '')
+
         this.context = this.canvasNode.node().getContext('2d')
+        this.context.scale(dpr, dpr)
         this.context.translate(this.width / 2, this.padding)
+
         this.hiddenContext = this.hiddenCanvasNode.node().getContext('2d')
+        this.hiddenContext.scale(dpr, dpr)
         this.hiddenContext.translate(this.width / 2, this.padding)
     }
 
@@ -391,18 +372,16 @@ export class d3Chart {
     }
 
     setClickListener() {
-        console.log('log 1')
         const self = this
+        const dpr = window.devicePixelRatio || 1;
         this.canvasNode.node().addEventListener('click', (e) => {
-            console.log(`log 2:  x: ${e.layerX}  y: ${e.layerY}`)
             const colorStr = getColorStringFromCanvas(
                 self.hiddenContext,
-                e.layerX,
-                e.layerY
+                e.layerX * dpr,
+                e.layerY * dpr
             )
             const node = self.colorNodeMap[colorStr]
             if (node) {
-                console.log('log 3')
                 self.toggleTreeNode(node.data()[0])
                 self.update(node.data()[0])
             }
