@@ -32,6 +32,8 @@ export class d3Chart {
     }
 
     init() {
+        console.log('init')
+
         this.initVariables()
         this.initCanvas()
         this.initVirtualNode()
@@ -39,13 +41,15 @@ export class d3Chart {
     }
 
     initVariables() {
+        console.log('initVariables')
+
         this.width = window.innerWidth
         this.height = window.innerHeight
         this.padding = 20
         // tree node size
         this.nodeWidth = 180
         this.nodeHeight = 280
-        // org unit size
+        // box unit size
         this.unitPadding = 20
         this.unitWidth = 140
         this.unitHeight = 100
@@ -55,7 +59,9 @@ export class d3Chart {
     }
 
     draw(data) {
+        console.log('draw')
         this.data = this.d3.hierarchy(data)
+        this.collapseNodes(this.data);
         this.treeGenerator =
             this.d3
                 .tree()
@@ -68,7 +74,20 @@ export class d3Chart {
         })
     }
 
+    collapseNodes(node, depth = 0) {
+        console.log('collapseNodes')
+        if (node.children) {
+            if (depth >= 1) {
+                node._children = node.children;
+                node.children = null;
+            } else {
+                node.children.forEach(child => this.collapseNodes(child, depth + 1));
+            }
+        }
+    }
+
     update(targetTreeNode) {
+        console.log('update')
         this.treeData = this.treeGenerator(this.data)
         const nodes = this.treeData.descendants()
         const links = this.treeData.links()
@@ -79,18 +98,20 @@ export class d3Chart {
         let animatedEndY = 0
 
         if (targetTreeNode) {
-            animatedStartX = targetTreeNode.x0
-            animatedStartY = targetTreeNode.y0
-            animatedEndX = targetTreeNode.x
-            animatedEndY = targetTreeNode.y
+            animatedStartX = isHorizontal ? targetTreeNode.x0 : targetTreeNode.y0
+            animatedStartY = isHorizontal ? targetTreeNode.y0 : targetTreeNode.x0
+            animatedEndX = isHorizontal ? targetTreeNode.x : targetTreeNode.y
+            animatedEndY = isHorizontal ? targetTreeNode.y : targetTreeNode.x
         }
-        this.updateOrgUnits(
+
+        this.updateBoxes(
             nodes,
             animatedStartX,
             animatedStartY,
             animatedEndX,
             animatedEndY
         )
+        
         this.updateLinks(
             links,
             animatedStartX,
@@ -103,19 +124,21 @@ export class d3Chart {
         this.bindNodeToTreeData()
     }
 
-    updateOrgUnits(
+    updateBoxes(
         nodes,
         animatedStartX,
         animatedStartY,
         animatedEndX,
         animatedEndY
     ) {
-        let orgUnitSelection = this.virtualContainerNode
-            .selectAll('.orgUnit')
+        console.log('updateBoxes')
+
+        let boxSelection = this.virtualContainerNode
+            .selectAll('.box')
             .data(nodes, (d) => d['colorKey'])
 
-        orgUnitSelection
-            .attr('class', 'orgUnit')
+        boxSelection
+            .attr('class', 'box')
             .attr('x', function (data) { return isHorizontal ? data.x0 : data.y0 })
             .attr('y', function (data) { return isHorizontal ? data.y0 : data.x0 })
             .transition()
@@ -124,10 +147,10 @@ export class d3Chart {
             .attr('y', function (data) { return isHorizontal ? data.y : data.x })
             .attr('fillStyle', '#ff0000')
 
-        orgUnitSelection
+        boxSelection
             .enter()
-            .append('orgUnit')
-            .attr('class', 'orgUnit')
+            .append('box')
+            .attr('class', 'box')
             .attr('x', isHorizontal ? animatedStartX : animatedStartY)
             .attr('y', isHorizontal ? animatedStartY : animatedStartX)
             .transition()
@@ -136,7 +159,7 @@ export class d3Chart {
             .attr('y', function (data) { return isHorizontal ? data.y : data.x })
             .attr('fillStyle', '#ff0000')
 
-        orgUnitSelection
+        boxSelection
             .exit()
             .transition()
             .duration(this.duration)
@@ -150,7 +173,7 @@ export class d3Chart {
             treeNode['y0'] = isHorizontal ? treeNode.y : treeNode.x
         })
 
-        orgUnitSelection = null
+        boxSelection = null
     }
 
     updateLinks(
@@ -160,6 +183,8 @@ export class d3Chart {
         animatedEndX,
         animatedEndY
     ) {
+        console.log('updateLinks')
+
         let linkSelection = this.virtualContainerNode
             .selectAll('.link')
             .data(links, function (d) {
@@ -215,6 +240,8 @@ export class d3Chart {
     }
 
     initCanvas() {
+        console.log('initCanvas')
+
         this.container = this.d3.select('#d3-chart-container')
         const dpr = window.devicePixelRatio || 1;
 
@@ -245,15 +272,17 @@ export class d3Chart {
     }
 
     initVirtualNode() {
+        console.log('initVirtualNode')
         let virtualContainer = document.createElement('root')
         this.virtualContainerNode = this.d3.select(virtualContainer)
         this.colorNodeMap = {}
     }
 
     addColorKey() {
+        console.log('addColorKey')
         // give each node a unique color
         const self = this
-        this.virtualContainerNode.selectAll('.orgUnit').each(function () {
+        this.virtualContainerNode.selectAll('.box').each(function () {
             const node = self.d3.select(this)
             let newColor = randomColor()
             while (self.colorNodeMap[newColor]) {
@@ -266,8 +295,9 @@ export class d3Chart {
     }
 
     bindNodeToTreeData() {
+        console.log('bindNodeToTreeData')
         const self = this
-        this.virtualContainerNode.selectAll('.orgUnit').each(function () {
+        this.virtualContainerNode.selectAll('.box').each(function () {
             const node = self.d3.select(this)
             const data = node.data()[0]
             data.node = node
@@ -304,7 +334,7 @@ export class d3Chart {
             self.context.stroke(path)
         })
 
-        this.virtualContainerNode.selectAll('.orgUnit').each(function () {
+        this.virtualContainerNode.selectAll('.box').each(function () {
             const node = self.d3.select(this)
             const treeNode = node.data()[0]
             const data = treeNode.data
@@ -349,7 +379,7 @@ export class d3Chart {
     drawHiddenCanvas() {
         this.hiddenContext.clearRect(-this.width / 2, -this.padding, this.width, this.height)
         const self = this
-        this.virtualContainerNode.selectAll('.orgUnit').each(function () {
+        this.virtualContainerNode.selectAll('.box').each(function () {
             const node = self.d3.select(this)
             self.hiddenContext.fillStyle = node.attr('colorKey')
             roundRect(
@@ -366,19 +396,22 @@ export class d3Chart {
     }
 
     setCanvasListener() {
+        console.log('setCanvasListener')
         this.setClickListener()
         this.setDragListener()
         this.setMouseWheelZoomListener()
     }
 
     setClickListener() {
+        console.log('setClickListener')
         const self = this
         const dpr = window.devicePixelRatio || 1;
         this.canvasNode.node().addEventListener('click', (e) => {
+            // gets position of node
             const colorStr = getColorStringFromCanvas(
                 self.hiddenContext,
-                e.layerX * dpr,
-                e.layerY * dpr
+                (e.layerX - 8) * dpr, // offset manual fix
+                (e.layerY - 63) * dpr // offset manual fix
             )
             const node = self.colorNodeMap[colorStr]
             if (node) {
@@ -389,6 +422,7 @@ export class d3Chart {
     }
 
     setMouseWheelZoomListener() {
+        console.log('setMouseWheelZoomListener')
         const self = this
         this.canvasNode.node().addEventListener('mousewheel', (event) => {
             event.preventDefault()
@@ -401,6 +435,7 @@ export class d3Chart {
     }
 
     setDragListener() {
+        console.log('setDragListener')
         this.onDrag_ = false
         this.dragStartPoint_ = { x: 0, y: 0 }
         const self = this
@@ -435,16 +470,19 @@ export class d3Chart {
     }
 
     toggleTreeNode(treeNode) {
+        console.log('toggleTreeNode')
         if (treeNode.children) {
             treeNode._children = treeNode.children
             treeNode.children = null
-        } else {
+        }
+        else {
             treeNode.children = treeNode._children
             treeNode._children = null
         }
     }
 
     zoomIn() {
+        console.log('zoomIn')
         if (this.scale > 7) return;
         this.clearCanvas_();
         const zoomFactor = 1.1;
@@ -455,6 +493,7 @@ export class d3Chart {
     }
 
     zoomOut() {
+        console.log('zoomOut')
         if (this.scale < 0.1) return;
         this.clearCanvas_();
         const zoomFactor = 0.9;
@@ -465,6 +504,7 @@ export class d3Chart {
     }
 
     zoomReset() {
+        console.log('zoomReset')
         this.scale = 1.0;
         this.clearCanvas_();
         this.context.setTransform(1, 0, 0, 1, 0, 0);
@@ -475,6 +515,7 @@ export class d3Chart {
     }
 
     clearCanvas_() {
+        console.log('clearCanvas_')
         this.context.clearRect(-100000, -100000, 1000000, 10000000)
         this.hiddenContext.clearRect(-100000, -100000, 1000000, 10000000)
     }

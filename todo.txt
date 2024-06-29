@@ -1,0 +1,32 @@
+Tasks:
+
+-(done) make upright
+-(done) duplicate squares issue
+-(done) reset zoom function
+-(done) smooth zooming
+-(done) title double up
+-(done) clicking on nodes doesn't toggle collapse
+-(done) collapse nodes on page load
+-(done) set click Y axis offset issue
+-(done) clicking on node from distance doesn't work
+
+
+
+
+-clicking on any node redraws whole chart
+-chart in vertical mode redraws nodes from original horizontal position
+
+
+
+
+-expand node: expand 1 by one not all levels within a node
+-change line to square with radius
+-line thickness / color
+-add screenshot
+
+
+
+
+notes:
+-square lines: 
+https://stackoverflow.com/questions/60867684/d3-linkhorizontal-for-straight-line-curves
