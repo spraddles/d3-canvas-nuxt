@@ -1,9 +1,9 @@
 export const isHorizontal = false
 
-export const text = (ctx, text, x, y, fontSize, fontColor) => {
-    ctx.font = '14px Arial';
-    ctx.fillStyle = fontColor;
-    ctx.fillText(text, x, y);
+export const text = (context, text, x, y, fontSize, fontColor) => {
+    context.font = `${fontSize} Arial`;
+    context.fillStyle = fontColor;
+    context.fillText(text, x, y);
 };
 
 export const wrapText = (context, text, x, y, maxWidth, lineHeight, fontColor) => {

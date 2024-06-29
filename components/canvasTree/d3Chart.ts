@@ -33,7 +33,6 @@ export class d3Chart {
 
     init() {
         console.log('init')
-
         this.initVariables()
         this.initCanvas()
         this.initVirtualNode()
@@ -42,7 +41,6 @@ export class d3Chart {
 
     initVariables() {
         console.log('initVariables')
-
         this.width = window.innerWidth
         this.height = window.innerHeight
         this.padding = 20
@@ -67,7 +65,6 @@ export class d3Chart {
                 .tree()
                 .nodeSize([this.nodeWidth, this.nodeHeight])
         this.update(null)
-
         const self = this
         this.d3.timer(function () {
             self.drawCanvas()
@@ -112,7 +109,7 @@ export class d3Chart {
             animatedEndY
         )
         
-        this.updateLinks(
+        this.updateLines(
             links,
             animatedStartX,
             animatedStartY,
@@ -133,38 +130,38 @@ export class d3Chart {
     ) {
         console.log('updateBoxes')
 
-        let boxSelection = this.virtualContainerNode
+        let allBoxes = this.virtualContainerNode
             .selectAll('.box')
             .data(nodes, (d) => d['colorKey'])
 
-        boxSelection
+        allBoxes
             .attr('class', 'box')
-            .attr('x', function (data) { return isHorizontal ? data.x0 : data.y0 })
-            .attr('y', function (data) { return isHorizontal ? data.y0 : data.x0 })
+            .attr('x', function (data) { return !isHorizontal ? data.x0 : data.y0 }) // weird fix
+            .attr('y', function (data) { return !isHorizontal ? data.y0 : data.x0 }) // weird fix
             .transition()
             .duration(this.duration)
             .attr('x', function (data) { return isHorizontal ? data.x : data.y })
             .attr('y', function (data) { return isHorizontal ? data.y : data.x })
             .attr('fillStyle', '#ff0000')
 
-        boxSelection
+        allBoxes
             .enter()
             .append('box')
             .attr('class', 'box')
-            .attr('x', isHorizontal ? animatedStartX : animatedStartY)
-            .attr('y', isHorizontal ? animatedStartY : animatedStartX)
+            .attr('x', !isHorizontal ? animatedStartX : animatedStartY) // weird fix
+            .attr('y', !isHorizontal ? animatedStartY : animatedStartX) // weird fix
             .transition()
             .duration(this.duration)
             .attr('x', function (data) { return isHorizontal ? data.x : data.y })
             .attr('y', function (data) { return isHorizontal ? data.y : data.x })
             .attr('fillStyle', '#ff0000')
 
-        boxSelection
+        allBoxes
             .exit()
             .transition()
             .duration(this.duration)
-            .attr('x', isHorizontal ? animatedEndX : animatedEndY)
-            .attr('y', isHorizontal ? animatedEndY : animatedEndX)
+            .attr('x', !isHorizontal ? animatedEndX : animatedEndY) // weird fix
+            .attr('y', !isHorizontal ? animatedEndY : animatedEndX) // weird fix
             .remove()
 
         // record origin index for animation
@@ -173,30 +170,30 @@ export class d3Chart {
             treeNode['y0'] = isHorizontal ? treeNode.y : treeNode.x
         })
 
-        boxSelection = null
+        allBoxes = null
     }
 
-    updateLinks(
+    updateLines(
         links,
         animatedStartX,
         animatedStartY,
         animatedEndX,
         animatedEndY
     ) {
-        console.log('updateLinks')
+        console.log('updateLines')
 
-        let linkSelection = this.virtualContainerNode
+        let allLinks = this.virtualContainerNode
             .selectAll('.link')
             .data(links, function (d) {
                 return d.source['colorKey'] + ':' + d.target['colorKey']
             })
 
-        linkSelection
+        allLinks
             .attr('class', 'link')
-            .attr('sourceX', function (link) { return isHorizontal ? link.source['x00'] : link.source['y00'] })
-            .attr('sourceY', function (link) { return isHorizontal ? link.source['y00'] : link.source['x00'] })
-            .attr('targetX', function (link) { return isHorizontal ? link.target['x00'] : link.target['y00'] })
-            .attr('targetY', function (link) { return isHorizontal ? link.target['y00'] : link.target['x00'] })
+            .attr('sourceX', function (link) { return !isHorizontal ? link.source['x00'] : link.source['y00'] }) // weird fix
+            .attr('sourceY', function (link) { return !isHorizontal ? link.source['y00'] : link.source['x00'] }) // weird fix
+            .attr('targetX', function (link) { return !isHorizontal ? link.target['x00'] : link.target['y00'] }) // weird fix
+            .attr('targetY', function (link) { return !isHorizontal ? link.target['y00'] : link.target['x00'] }) // weird fix
             .transition()
             .duration(this.duration)
             .attr('sourceX', function (link) { return isHorizontal ? link.source.x : link.source.y })
@@ -204,14 +201,14 @@ export class d3Chart {
             .attr('targetX', function (link) { return isHorizontal ? link.target.x : link.target.y })
             .attr('targetY', function (link) { return isHorizontal ? link.target.y : link.target.x })
 
-        linkSelection
+        allLinks
             .enter()
             .append('link')
             .attr('class', 'link')
-            .attr('sourceX', isHorizontal ? animatedStartX : animatedStartY)
-            .attr('sourceY', isHorizontal ? animatedStartY : animatedStartX)
-            .attr('targetX', isHorizontal ? animatedStartX : animatedStartY)
-            .attr('targetY', isHorizontal ? animatedStartY : animatedStartX)
+            .attr('sourceX', !isHorizontal ? animatedStartX : animatedStartY) // weird fix
+            .attr('sourceY', !isHorizontal ? animatedStartY : animatedStartX) // weird fix
+            .attr('targetX', !isHorizontal ? animatedStartX : animatedStartY) // weird fix
+            .attr('targetY', !isHorizontal ? animatedStartY : animatedStartX) // weird fix
             .transition()
             .duration(this.duration)
             .attr('sourceX', function (link) { return isHorizontal ? link.source.x : link.source.y })
@@ -219,14 +216,14 @@ export class d3Chart {
             .attr('targetX', function (link) { return isHorizontal ? link.target.x : link.target.y })
             .attr('targetY', function (link) { return isHorizontal ? link.target.y : link.target.x })
 
-        linkSelection
+        allLinks
             .exit()
             .transition()
             .duration(this.duration)
-            .attr('sourceX', isHorizontal ? animatedEndX : animatedEndY)
-            .attr('sourceY', isHorizontal ? animatedEndY : animatedEndX)
-            .attr('targetX', isHorizontal ? animatedEndX : animatedEndY)
-            .attr('targetY', isHorizontal ? animatedEndY : animatedEndX)
+            .attr('sourceX', !isHorizontal ? animatedEndX : animatedEndY) // weird fix
+            .attr('sourceY', !isHorizontal ? animatedEndY : animatedEndX) // weird fix
+            .attr('targetX', !isHorizontal ? animatedEndX : animatedEndY) // weird fix
+            .attr('targetY', !isHorizontal ? animatedEndY : animatedEndX) // weird fix
             .remove()
 
         // record origin data for animation
@@ -236,12 +233,11 @@ export class d3Chart {
             treeNode.target['x00'] = isHorizontal ? treeNode.target.x : treeNode.target.y
             treeNode.target['y00'] = isHorizontal ? treeNode.target.y : treeNode.target.x
         })
-        linkSelection = null
+        allLinks = null
     }
 
     initCanvas() {
         console.log('initCanvas')
-
         this.container = this.d3.select('#d3-chart-container')
         const dpr = window.devicePixelRatio || 1;
 
@@ -360,7 +356,7 @@ export class d3Chart {
                 data.name,
                 indexX + self.unitPadding,
                 indexY + self.unitPadding,
-                '20px',
+                '15px',
                 '#ffffff'
             )
 
@@ -470,7 +466,7 @@ export class d3Chart {
     }
 
     toggleTreeNode(treeNode) {
-        console.log('toggleTreeNode')
+        console.log('toggleTreeNode: ', treeNode)
         if (treeNode.children) {
             treeNode._children = treeNode.children
             treeNode.children = null
