@@ -29,3 +29,9 @@ onMounted(() => {
     background-color: #eeeeee;
 }
 </style>
+
+<style>
+.canvas-grabbing {
+    cursor: grabbing;
+}
+</style>

@@ -4,6 +4,7 @@ import { customStep } from './customStep'
 
 export class d3Chart {
     d3: any
+    // dimensions
     width: number
     height: number
     padding: number
@@ -14,6 +15,7 @@ export class d3Chart {
     unitHeight: number
     duration: number
     scale: number
+    // tree
     data: any
     treeGenerator: any
     treeData: any
@@ -24,6 +26,12 @@ export class d3Chart {
     context: any
     hiddenContext: any
     colorNodeMap: {}
+    // drag
+    mouseDown: boolean
+    mouseMove: boolean
+    mouseOut: boolean
+    mouseUp: boolean
+    isDragging: boolean
     onDrag_: boolean
     dragStartPoint_: { x: number; y: number }
 
@@ -53,6 +61,12 @@ export class d3Chart {
         // animation duration
         this.duration = 600
         this.scale = 1.0
+        // drag
+        this.mouseDown = false
+        this.mouseMove = false
+        this.mouseOut = false
+        this.mouseUp = false
+        this.isDragging = false
     }
 
     draw(data) {
@@ -423,16 +437,34 @@ export class d3Chart {
         })
     }
 
+    setIsDragging() {
+        const self = this
+        if(self.mouseDown && self.mouseMove && !self.mouseOut && !self.mouseUp) {
+            document.body.classList.add('canvas-grabbing')
+            return self.isDragging = true
+        }
+        else {
+            document.body.classList.remove('canvas-grabbing')
+            return self.isDragging = false
+        }
+    }
+
     setDragListener() {
         this.onDrag_ = false
         this.dragStartPoint_ = { x: 0, y: 0 }
         const self = this
         this.canvasNode.node().onmousedown = function (e) {
+            self.mouseDown = true
+            self.mouseOut = false
+            self.mouseUp = false
+            self.setIsDragging()
             self.dragStartPoint_.x = e.x
             self.dragStartPoint_.y = e.y
             self.onDrag_ = true
         }
         this.canvasNode.node().onmousemove = function (e) {
+            self.mouseMove = true
+            self.setIsDragging()
             if (!self.onDrag_) {
                 return
             }
@@ -446,11 +478,17 @@ export class d3Chart {
             self.drawCanvas();
         }
         this.canvasNode.node().onmouseout = function (e) {
+            self.mouseOut = true
+            self.mouseDown = false
+            self.setIsDragging()
             if (self.onDrag_) {
                 self.onDrag_ = false
             }
         }
         this.canvasNode.node().onmouseup = function (e) {
+            self.mouseUp = true
+            self.mouseDown = false
+            self.setIsDragging()
             if (self.onDrag_) {
                 self.onDrag_ = false
             }
