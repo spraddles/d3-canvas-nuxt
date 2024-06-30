@@ -305,7 +305,7 @@ export class d3Chart {
             const targetX = +node.attr('targetX')
             const targetY = +node.attr('targetY')
             
-            const linkPath = d3.line()
+            const linkPath: function = d3.line()
                 .x(d => d[0])
                 .y(d => d[1])
                 .curve(curveStep)

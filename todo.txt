@@ -20,6 +20,8 @@ Tasks:
 https://github.com/d3/d3-shape/issues/74
 https://talk.observablehq.com/t/replacing-linkhorizontal-with-a-curvedstep-line-in-a-tree/4839/2
 https://observablehq.com/d/15eb4a59f6cc5746?ui=classic
+https://stackoverflow.com/questions/44958789/how-to-use-linkradial-to-draw-a-link-between-two-points
+https://stackoverflow.com/questions/40729164/d3-js-custom-curve-step-round
 
 
 
