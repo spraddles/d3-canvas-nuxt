@@ -1,4 +1,5 @@
 import * as d3 from 'd3'
+import { curveStep } from 'd3-shape'
 import { roundRect, text, wrapText, getColorStringFromCanvas, randomColor, isHorizontal } from './utils'
 
 export class d3Chart {
@@ -82,7 +83,7 @@ export class d3Chart {
     update(node) {
         this.treeData = this.treeGenerator(this.data);
         const boxes = this.treeData.descendants()
-        const links = this.treeData.links().filter(l => l.source.depth <= 2);
+        const links = this.treeData.links().filter(l => l.source.depth <= 2); // only expand one level at a time
 
         let animatedStartX = 0
         let animatedStartY = 0
@@ -299,21 +300,18 @@ export class d3Chart {
         // draw links
         this.virtualContainerNode.selectAll('.link').each(function () {
             const node = self.d3.select(this)
-            const linkPath = self.d3
-                .linkHorizontal()
-                .x(function (d) {
-                    return d.x
-                })
-                .y(function (d) {
-                    return d.y
-                })
-                .source(function () {
-                    return { x: node.attr('sourceX'), y: node.attr('sourceY') }
-                })
-                .target(function () {
-                    return { x: node.attr('targetX'), y: node.attr('targetY') }
-                })
-            const path = new Path2D(linkPath())
+            const sourceX = +node.attr('sourceX')
+            const sourceY = +node.attr('sourceY')
+            const targetX = +node.attr('targetX')
+            const targetY = +node.attr('targetY')
+            
+            const linkPath = d3.line()
+                .x(d => d[0])
+                .y(d => d[1])
+                .curve(curveStep)
+                ([[sourceX, sourceY], [(sourceX + targetX) / 2, sourceY], [(sourceX + targetX) / 2, targetY], [targetX, targetY]])
+            
+            const path = new Path2D(linkPath)
             self.context.stroke(path)
         })
 
@@ -325,7 +323,13 @@ export class d3Chart {
             const indexX = Number(node.attr('x')) - self.unitWidth / 2
             const indexY = Number(node.attr('y')) - self.unitHeight / 2
 
-            // draw unit outline rect (if you want to modify this line => please modify the same line in 'drawHiddenCanvas')
+            /*
+            ** Note: the 'roundRect' draws the box outline which 
+            ** needs to appear in both shown + hidden canvases. 
+            ** Whatever is changed in this shape needs to also be 
+            ** replicated in the 'drawHiddenCanvas' so the x + y 
+            ** positions can be calculated.
+            */
 
             roundRect(
                 self.context,

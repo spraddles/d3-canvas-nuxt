@@ -11,15 +11,29 @@ Tasks:
 -(done) clicking on any node redraws whole chart
 -(done) chart in vertical mode redraws nodes from original horizontal position
 -(done) expand node: expand 1 by one not all levels within a node
+-(done) rename treeNode to node
+-(done) change line from curve to square joins
 
 
 
--rename treeNode to node
--change line to square with radius
+-change line to square with radius:
+https://github.com/d3/d3-shape/issues/74
+https://talk.observablehq.com/t/replacing-linkhorizontal-with-a-curvedstep-line-in-a-tree/4839/2
+https://observablehq.com/d/15eb4a59f6cc5746?ui=classic
+
+
+
+
+
+-node origin animation on node expand (on box + line enter)
+line: .attr('x', !isHorizontal ? animatedStartX : animatedStartY) // weird fix
+
+
+
+
 -line thickness / color
 -title double up
 -add screenshot
-
 
 
 
