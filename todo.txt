@@ -4,24 +4,20 @@ Tasks:
 -(done) duplicate squares issue
 -(done) reset zoom function
 -(done) smooth zooming
--(done) title double up
 -(done) clicking on nodes doesn't toggle collapse
 -(done) collapse nodes on page load
 -(done) set click Y axis offset issue
 -(done) clicking on node from distance doesn't work
 -(done) clicking on any node redraws whole chart
 -(done) chart in vertical mode redraws nodes from original horizontal position
+-(done) expand node: expand 1 by one not all levels within a node
 
 
 
-
--expand node: expand 1 by one not all levels within a node
-
-
-
-
+-rename treeNode to node
 -change line to square with radius
 -line thickness / color
+-title double up
 -add screenshot
 
 

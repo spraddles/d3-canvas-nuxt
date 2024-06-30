@@ -80,9 +80,9 @@ export class d3Chart {
     }
 
     update(targetTreeNode) {
-        this.treeData = this.treeGenerator(this.data)
+        this.treeData = this.treeGenerator(this.data);
         const nodes = this.treeData.descendants()
-        const links = this.treeData.links()
+        const links = this.treeData.links().filter(l => l.source.depth <= 2);
 
         let animatedStartX = 0
         let animatedStartY = 0
@@ -396,6 +396,7 @@ export class d3Chart {
             )
             const node = self.colorNodeMap[colorStr]
             if (node) {
+                console.log('node: ', node)
                 self.toggleTreeNode(node.data()[0])
                 self.update(node.data()[0])
             }
@@ -449,15 +450,26 @@ export class d3Chart {
     }
 
     toggleTreeNode(treeNode) {
+        // already open: close nodes
         if (treeNode.children) {
-            treeNode._children = treeNode.children
-            treeNode.children = null
-        }
-        else {
-            treeNode.children = treeNode._children
-            treeNode._children = null
+            treeNode._children = treeNode.children;
+            treeNode.children = null;
+        } 
+        // already closed: open nodes
+        else if (treeNode._children) {
+
+            treeNode.children = treeNode._children;
+            treeNode._children = null;
+
+            if (treeNode.children) {
+                treeNode.children.forEach(child => {
+                    child._children = child.children;
+                    child.children = null;
+                })
+            }
         }
     }
+    
 
     zoomIn() {
         if (this.scale > 7) return;
