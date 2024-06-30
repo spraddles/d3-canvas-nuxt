@@ -79,9 +79,9 @@ export class d3Chart {
         }
     }
 
-    update(targetTreeNode) {
+    update(node) {
         this.treeData = this.treeGenerator(this.data);
-        const nodes = this.treeData.descendants()
+        const boxes = this.treeData.descendants()
         const links = this.treeData.links().filter(l => l.source.depth <= 2);
 
         let animatedStartX = 0
@@ -89,15 +89,15 @@ export class d3Chart {
         let animatedEndX = 0
         let animatedEndY = 0
 
-        if (targetTreeNode) {
-            animatedStartX = isHorizontal ? targetTreeNode.x0 : targetTreeNode.y0
-            animatedStartY = isHorizontal ? targetTreeNode.y0 : targetTreeNode.x0
-            animatedEndX = isHorizontal ? targetTreeNode.x : targetTreeNode.y
-            animatedEndY = isHorizontal ? targetTreeNode.y : targetTreeNode.x
+        if (node) {
+            animatedStartX = isHorizontal ? node.x0 : node.y0
+            animatedStartY = isHorizontal ? node.y0 : node.x0
+            animatedEndX = isHorizontal ? node.x : node.y
+            animatedEndY = isHorizontal ? node.y : node.x
         }
 
         this.updateBoxes(
-            nodes,
+            boxes,
             animatedStartX,
             animatedStartY,
             animatedEndX,
@@ -117,7 +117,7 @@ export class d3Chart {
     }
 
     updateBoxes(
-        nodes,
+        boxes,
         animatedStartX,
         animatedStartY,
         animatedEndX,
@@ -125,7 +125,7 @@ export class d3Chart {
     ) {
         let allBoxes = this.virtualContainerNode
             .selectAll('.box')
-            .data(nodes, (d) => d['colorKey'])
+            .data(boxes, (d) => d['colorKey'])
 
         allBoxes
             .attr('class', 'box')
@@ -158,9 +158,9 @@ export class d3Chart {
             .remove()
 
         // record origin index for animation
-        nodes.forEach((treeNode) => {
-            treeNode['x0'] = isHorizontal ? treeNode.x : treeNode.y
-            treeNode['y0'] = isHorizontal ? treeNode.y : treeNode.x
+        boxes.forEach((box) => {
+            box['x0'] = isHorizontal ? box.x : box.y
+            box['y0'] = isHorizontal ? box.y : box.x
         })
 
         allBoxes = null
@@ -218,11 +218,11 @@ export class d3Chart {
             .remove()
 
         // record origin data for animation
-        links.forEach((treeNode) => {
-            treeNode.source['x00'] = isHorizontal ? treeNode.source.x : treeNode.source.y
-            treeNode.source['y00'] = isHorizontal ? treeNode.source.y : treeNode.source.x
-            treeNode.target['x00'] = isHorizontal ? treeNode.target.x : treeNode.target.y
-            treeNode.target['y00'] = isHorizontal ? treeNode.target.y : treeNode.target.x
+        links.forEach((link) => {
+            link.source['x00'] = isHorizontal ? link.source.x : link.source.y
+            link.source['y00'] = isHorizontal ? link.source.y : link.source.x
+            link.target['x00'] = isHorizontal ? link.target.x : link.target.y
+            link.target['y00'] = isHorizontal ? link.target.y : link.target.x
         })
         allLinks = null
     }
@@ -449,20 +449,20 @@ export class d3Chart {
         }
     }
 
-    toggleTreeNode(treeNode) {
+    toggleTreeNode(node) {
         // already open: close nodes
-        if (treeNode.children) {
-            treeNode._children = treeNode.children;
-            treeNode.children = null;
+        if (node.children) {
+            node._children = node.children;
+            node.children = null;
         } 
         // already closed: open nodes
-        else if (treeNode._children) {
+        else if (node._children) {
 
-            treeNode.children = treeNode._children;
-            treeNode._children = null;
+            node.children = node._children;
+            node._children = null;
 
-            if (treeNode.children) {
-                treeNode.children.forEach(child => {
+            if (node.children) {
+                node.children.forEach(child => {
                     child._children = child.children;
                     child.children = null;
                 })
