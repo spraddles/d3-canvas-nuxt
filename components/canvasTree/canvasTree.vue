@@ -8,7 +8,7 @@
 </template>
 
 <script setup lang="ts">
-import { d3Chart } from './d3Chart'
+import { d3Chart } from './classes/d3Chart'
 import { ref } from 'vue'
 import Data from './data.json' with { type: 'json' }
 

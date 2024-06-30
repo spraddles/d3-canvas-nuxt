@@ -1,6 +1,6 @@
 import * as d3 from 'd3'
-import { roundRect, text, wrapText, getColorStringFromCanvas, randomColor, isHorizontal } from './utils'
-import { customStep } from './class'
+import { roundRect, text, wrapText, getColorStringFromCanvas, randomColor, isHorizontal } from '../utils'
+import { customStep } from './customStep'
 
 export class d3Chart {
     d3: any
