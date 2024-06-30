@@ -142,8 +142,8 @@ export class d3Chart {
             .enter()
             .append('box')
             .attr('class', 'box')
-            .attr('x', !isHorizontal ? animatedStartX : animatedStartY) // weird fix
-            .attr('y', !isHorizontal ? animatedStartY : animatedStartX) // weird fix
+            .attr('x', isHorizontal ? animatedStartX : animatedStartY)
+            .attr('y', isHorizontal ? animatedStartY : animatedStartX)
             .transition()
             .duration(this.duration)
             .attr('x', function (data) { return isHorizontal ? data.x : data.y })
@@ -197,10 +197,10 @@ export class d3Chart {
             .enter()
             .append('link')
             .attr('class', 'link')
-            .attr('sourceX', !isHorizontal ? animatedStartX : animatedStartY) // weird fix
-            .attr('sourceY', !isHorizontal ? animatedStartY : animatedStartX) // weird fix
-            .attr('targetX', !isHorizontal ? animatedStartX : animatedStartY) // weird fix
-            .attr('targetY', !isHorizontal ? animatedStartY : animatedStartX) // weird fix
+            .attr('sourceX', isHorizontal ? animatedStartX : animatedStartY)
+            .attr('sourceY', isHorizontal ? animatedStartY : animatedStartX)
+            .attr('targetX', isHorizontal ? animatedStartX : animatedStartY)
+            .attr('targetY', isHorizontal ? animatedStartY : animatedStartX)
             .transition()
             .duration(this.duration)
             .attr('sourceX', function (link) { return isHorizontal ? link.source.x : link.source.y })
