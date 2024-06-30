@@ -6,8 +6,9 @@ export const text = (context, text, x, y, fontSize, fontColor) => {
     context.fillText(text, x, y);
 };
 
-export const wrapText = (context, text, x, y, maxWidth, lineHeight, fontColor) => {
+export const wrapText = (context, text, x, y, maxWidth, fontSize, lineHeight, fontColor) => {
     context.fillStyle = fontColor;
+    context.font = `${fontSize} Arial`;
     const words = text.split(' ');
     let line = '';
     for (let n = 0; n < words.length; n++) {

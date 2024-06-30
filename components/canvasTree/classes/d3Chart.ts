@@ -1,5 +1,5 @@
 import * as d3 from 'd3'
-import { roundRect, text, wrapText, getColorStringFromCanvas, randomColor, isHorizontal } from '../utils'
+import { roundRect, wrapText, getColorStringFromCanvas, randomColor, isHorizontal } from '../utils'
 import { customStep } from './customStep'
 
 export class d3Chart {
@@ -7,8 +7,8 @@ export class d3Chart {
     width: number
     height: number
     padding: number
-    nodeWidth: number
     nodeHeight: number
+    nodeWidth: number
     unitPadding: number
     unitWidth: number
     unitHeight: number
@@ -44,11 +44,11 @@ export class d3Chart {
         this.height = window.innerHeight
         this.padding = 20
         // tree node size
-        this.nodeWidth = 180
-        this.nodeHeight = 280
+        this.nodeWidth = 500
+        this.nodeHeight = 150
         // box unit size
         this.unitPadding = 20
-        this.unitWidth = 140
+        this.unitWidth = 200
         this.unitHeight = 100
         // animation duration
         this.duration = 600
@@ -61,7 +61,7 @@ export class d3Chart {
         this.treeGenerator =
             this.d3
                 .tree()
-                .nodeSize([this.nodeWidth, this.nodeHeight])
+                .nodeSize([this.nodeHeight, this.nodeWidth])
         this.update(null)
         const self = this
         this.d3.timer(function () {
@@ -136,7 +136,6 @@ export class d3Chart {
             .duration(this.duration)
             .attr('x', function (data) { return isHorizontal ? data.x : data.y })
             .attr('y', function (data) { return isHorizontal ? data.y : data.x })
-            .attr('fillStyle', '#ff0000')
 
         allBoxes
             .enter()
@@ -148,7 +147,6 @@ export class d3Chart {
             .duration(this.duration)
             .attr('x', function (data) { return isHorizontal ? data.x : data.y })
             .attr('y', function (data) { return isHorizontal ? data.y : data.x })
-            .attr('fillStyle', '#ff0000')
 
         allBoxes
             .exit()
@@ -299,33 +297,32 @@ export class d3Chart {
         const self = this
         // draw links
         this.virtualContainerNode.selectAll('.link').each(function () {
-
             const node = self.d3.select(this)
             const sourceX = +node.attr('sourceX')
             const sourceY = +node.attr('sourceY')
             const targetX = +node.attr('targetX')
             const targetY = +node.attr('targetY')
-
             const linkPath = d3.line()
                 .x(d => d[0])
                 .y(d => d[1])
-                .curve(customStep(50))
+                .curve(customStep(30))
                 ([
                     [sourceX, sourceY],
                     [(sourceX + targetX) / 2, sourceY],
                     [(sourceX + targetX) / 2, targetY],
                     [targetX, targetY]
                 ])
-            
             const path = new Path2D(linkPath)
             self.context.stroke(path)
+            self.context.strokeStyle = '#B3B3B3'
+            self.context.lineWidth = 3
         })
-
+        // draw boxes
         this.virtualContainerNode.selectAll('.box').each(function () {
             const node = self.d3.select(this)
             const treeNode = node.data()[0]
             const data = treeNode.data
-            self.context.fillStyle = '#3ca0ff'
+            self.context.fillStyle = '#FFFFFF'
             const indexX = Number(node.attr('x')) - self.unitWidth / 2
             const indexY = Number(node.attr('y')) - self.unitHeight / 2
 
@@ -343,27 +340,28 @@ export class d3Chart {
                 indexY,
                 self.unitWidth,
                 self.unitHeight,
-                4,
+                20,
                 true,
                 false
             )
 
-            text(
-                self.context,
-                data.name,
-                indexX + self.unitPadding,
-                indexY + self.unitPadding,
-                '15px',
-                '#ffffff'
-            )
+            // text(
+            //     self.context,
+            //     data.name,
+            //     indexX + self.unitPadding,
+            //     indexY + self.unitPadding + 15,
+            //     '12px',
+            //     '#000000'
+            // )
 
             wrapText(
                 self.context,
                 data.name,
                 indexX + self.unitPadding,
-                indexY + self.unitPadding + 24,
+                indexY + self.unitPadding + 10,
                 self.unitWidth - 2 * self.unitPadding,
-                20,
+                '14px', // font size
+                20, // line height
                 '#000000'
             )
         })

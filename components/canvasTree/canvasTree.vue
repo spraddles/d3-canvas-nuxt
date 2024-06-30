@@ -1,10 +1,12 @@
 <template>
-    <div class="zoom-buttons">
-        <div class="bigger" @click="orgChart.zoomIn()">Zoom in</div>
-        <div class="smaller" @click="orgChart.zoomOut()">Zoom out</div>
-        <div class="reset" @click="orgChart.zoomReset()">Zoom reset</div>
+    <div class="chart">
+        <div class="zoom-buttons">
+            <div class="bigger" @click="orgChart.zoomIn()">Zoom in</div>
+            <div class="smaller" @click="orgChart.zoomOut()">Zoom out</div>
+            <div class="reset" @click="orgChart.zoomReset()">Zoom reset</div>
+        </div>
+        <div id="d3-chart-container"></div>
     </div>
-    <div id="d3-chart-container"></div>
 </template>
 
 <script setup lang="ts">
@@ -23,4 +25,7 @@ onMounted(() => {
 </script>
 
 <style scoped>
+.chart {
+    background-color: #eeeeee;
+}
 </style>

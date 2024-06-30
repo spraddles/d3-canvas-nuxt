@@ -14,23 +14,17 @@ Tasks:
 -(done) rename treeNode to node
 -(done) change line from curve to square joins
 -(done) add radius to square line
+-(done) fix click expand box origin position for animation
+-(done) line thickness / color
+-(done) title double up
 
 
 
 
 
--node origin animation on node expand (on box + line enter)
-line: .attr('x', !isHorizontal ? animatedStartX : animatedStartY) // weird fix
+line position to box too wide
+show mouse hand on grab
+set initial scale: zoom out more
+add screenshot
 
 
-
-
--line thickness / color
--title double up
--add screenshot
-
-
-
-notes:
--square lines: 
-https://stackoverflow.com/questions/60867684/d3-linkhorizontal-for-straight-line-curves

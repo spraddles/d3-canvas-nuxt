@@ -1,3 +1,5 @@
+// ref: https://github.com/d3/d3-shape/issues/74
+
 class Step {
     constructor(context, t, radius) {
         this._context = context;
