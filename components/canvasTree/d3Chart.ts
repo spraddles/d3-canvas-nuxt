@@ -1,6 +1,6 @@
 import * as d3 from 'd3'
-import { curveStep } from 'd3-shape'
 import { roundRect, text, wrapText, getColorStringFromCanvas, randomColor, isHorizontal } from './utils'
+import { customStep } from './class'
 
 export class d3Chart {
     d3: any
@@ -299,17 +299,23 @@ export class d3Chart {
         const self = this
         // draw links
         this.virtualContainerNode.selectAll('.link').each(function () {
+
             const node = self.d3.select(this)
             const sourceX = +node.attr('sourceX')
             const sourceY = +node.attr('sourceY')
             const targetX = +node.attr('targetX')
             const targetY = +node.attr('targetY')
-            
-            const linkPath: function = d3.line()
+
+            const linkPath = d3.line()
                 .x(d => d[0])
                 .y(d => d[1])
-                .curve(curveStep)
-                ([[sourceX, sourceY], [(sourceX + targetX) / 2, sourceY], [(sourceX + targetX) / 2, targetY], [targetX, targetY]])
+                .curve(customStep(50))
+                ([
+                    [sourceX, sourceY],
+                    [(sourceX + targetX) / 2, sourceY],
+                    [(sourceX + targetX) / 2, targetY],
+                    [targetX, targetY]
+                ])
             
             const path = new Path2D(linkPath)
             self.context.stroke(path)
