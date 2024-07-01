@@ -17,14 +17,18 @@ Tasks:
 -(done) fix click expand box origin position for animation
 -(done) line thickness / color
 -(done) title double up
+-(done) show mouse hand on grab
+-(done) add canvas panning
+-(done) trackpad 2 finger pinch zoom ability
 
 
 
 
+
+make url available on netlify
+bring into nevam-app
 
 line position to box too wide
-show mouse hand on grab
+zooming in / out not centered
 set initial scale: zoom out more
 add screenshot
-
-

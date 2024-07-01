@@ -31,7 +31,6 @@ export class d3Chart {
     mouseMove: boolean
     mouseOut: boolean
     mouseUp: boolean
-    isDragging: boolean
     onDrag_: boolean
     dragStartPoint_: { x: number; y: number }
 
@@ -66,7 +65,6 @@ export class d3Chart {
         this.mouseMove = false
         this.mouseOut = false
         this.mouseUp = false
-        this.isDragging = false
     }
 
     draw(data) {
@@ -118,7 +116,7 @@ export class d3Chart {
             animatedEndX,
             animatedEndY
         )
-        
+
         this.updateLines(
             links,
             animatedStartX,
@@ -359,15 +357,6 @@ export class d3Chart {
                 false
             )
 
-            // text(
-            //     self.context,
-            //     data.name,
-            //     indexX + self.unitPadding,
-            //     indexY + self.unitPadding + 15,
-            //     '12px',
-            //     '#000000'
-            // )
-
             wrapText(
                 self.context,
                 data.name,
@@ -393,17 +382,35 @@ export class d3Chart {
                 Number(node.attr('y')) - self.unitHeight / 2,
                 self.unitWidth,
                 self.unitHeight,
-                4,
+                20,
                 true,
                 false
             )
         })
     }
 
+    toggleTreeNode(node) {
+        // already open: close nodes
+        if (node.children) {
+            node._children = node.children;
+            node.children = null;
+        }
+        // already closed: open nodes
+        else if (node._children) {
+            node.children = node._children;
+            node._children = null;
+            if (node.children) {
+                node.children.forEach(child => {
+                    child._children = child.children;
+                    child.children = null;
+                })
+            }
+        }
+    }
+
     setCanvasListener() {
         this.setClickListener()
-        this.setDragListener()
-        this.setMouseWheelZoomListener()
+        this.setMouseListeners()
     }
 
     setClickListener() {
@@ -416,6 +423,7 @@ export class d3Chart {
                 (e.layerX - 8) * dpr, // offset manual fix
                 (e.layerY - 63) * dpr // offset manual fix
             )
+            // magic with colors to find node position
             const node = self.colorNodeMap[colorStr]
             if (node) {
                 console.log('node: ', node)
@@ -425,34 +433,22 @@ export class d3Chart {
         })
     }
 
-    setMouseWheelZoomListener() {
-        const self = this
-        this.canvasNode.node().addEventListener('mousewheel', (event) => {
-            event.preventDefault()
-            if (event.deltaY < 0) {
-                self.zoomIn()
-            } else {
-                self.zoomOut()
-            }
-        })
-    }
-
     setIsDragging() {
+        // for mouse pointer change
         const self = this
-        if(self.mouseDown && self.mouseMove && !self.mouseOut && !self.mouseUp) {
-            document.body.classList.add('canvas-grabbing')
-            return self.isDragging = true
+        if (self.mouseDown && self.mouseMove && !self.mouseOut && !self.mouseUp) {
+            return document.body.classList.add('canvas-grabbing')
         }
         else {
-            document.body.classList.remove('canvas-grabbing')
-            return self.isDragging = false
+            return document.body.classList.remove('canvas-grabbing')
         }
     }
 
-    setDragListener() {
+    setMouseListeners() {
         this.onDrag_ = false
         this.dragStartPoint_ = { x: 0, y: 0 }
         const self = this
+
         this.canvasNode.node().onmousedown = function (e) {
             self.mouseDown = true
             self.mouseOut = false
@@ -462,6 +458,7 @@ export class d3Chart {
             self.dragStartPoint_.y = e.y
             self.onDrag_ = true
         }
+
         this.canvasNode.node().onmousemove = function (e) {
             self.mouseMove = true
             self.setIsDragging()
@@ -477,6 +474,7 @@ export class d3Chart {
             self.clearCanvas_();
             self.drawCanvas();
         }
+
         this.canvasNode.node().onmouseout = function (e) {
             self.mouseOut = true
             self.mouseDown = false
@@ -485,6 +483,7 @@ export class d3Chart {
                 self.onDrag_ = false
             }
         }
+
         this.canvasNode.node().onmouseup = function (e) {
             self.mouseUp = true
             self.mouseDown = false
@@ -493,34 +492,35 @@ export class d3Chart {
                 self.onDrag_ = false
             }
         }
-    }
 
-    toggleTreeNode(node) {
-        // already open: close nodes
-        if (node.children) {
-            node._children = node.children;
-            node.children = null;
-        } 
-        // already closed: open nodes
-        else if (node._children) {
-
-            node.children = node._children;
-            node._children = null;
-
-            if (node.children) {
-                node.children.forEach(child => {
-                    child._children = child.children;
-                    child.children = null;
-                })
+        this.canvasNode.node().onwheel = function (e) {
+            // 2 finger pinch zoom
+            if (e.ctrlKey) {
+                e.preventDefault();
+                if (e.deltaY < 0) {
+                    self.zoomIn()
+                } else {
+                    self.zoomOut()
+                }
+            }
+            // handle panning
+            else {
+                e.preventDefault();
+                const direction = -1 // set to 1 for natural
+                const deltaX = (e.deltaX / self.scale) * direction
+                const deltaY = (e.deltaY / self.scale) * direction
+                self.context.translate(deltaX, deltaY);
+                self.hiddenContext.translate(deltaX, deltaY);
+                self.clearCanvas_();
+                self.drawCanvas();
             }
         }
     }
-    
 
     zoomIn() {
         if (this.scale > 7) return;
         this.clearCanvas_();
-        const zoomFactor = 1.1;
+        const zoomFactor = 1.05;
         this.scale *= zoomFactor;
         this.context.scale(zoomFactor, zoomFactor);
         this.hiddenContext.scale(zoomFactor, zoomFactor);
@@ -530,7 +530,7 @@ export class d3Chart {
     zoomOut() {
         if (this.scale < 0.1) return;
         this.clearCanvas_();
-        const zoomFactor = 0.9;
+        const zoomFactor = 0.95;
         this.scale *= zoomFactor;
         this.context.scale(zoomFactor, zoomFactor);
         this.hiddenContext.scale(zoomFactor, zoomFactor);
