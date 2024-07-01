@@ -31,7 +31,17 @@ onMounted(() => {
 </style>
 
 <style>
+.orgChart.hidden {
+    display: none;
+}
 .canvas-grabbing {
     cursor: grabbing;
+}
+.zoom-buttons {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: 50px;
+    padding: 20px;
 }
 </style>

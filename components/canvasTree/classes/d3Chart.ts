@@ -252,7 +252,7 @@ export class d3Chart {
 
         this.hiddenCanvasNode = this.container
             .append('canvas')
-            .attr('class', 'orgChart')
+            .attr('class', 'orgChart hidden')
             .attr('width', this.width * dpr)
             .attr('height', this.height * dpr)
             .style('width', `${this.width}px`)
