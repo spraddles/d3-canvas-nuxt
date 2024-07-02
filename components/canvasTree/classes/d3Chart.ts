@@ -420,8 +420,8 @@ export class d3Chart {
             // gets position of node
             const colorStr = getColorStringFromCanvas(
                 self.hiddenContext,
-                (e.layerX - 8) * dpr, // offset manual fix
-                (e.layerY - 63) * dpr // offset manual fix
+                e.layerX * dpr,
+                (e.layerY - 10) * dpr // manual offset fix
             )
             // magic with colors to find node position
             const node = self.colorNodeMap[colorStr]
